@@ -87,6 +87,30 @@ def get_dashboard_summary(user_data: dict = Depends(verify_firebase_token), db: 
         db.commit()
         db.refresh(user)
 
+    # Check if user has sales data; if 0, auto-seed demo data so dashboard loads instantly
+    sales_count = db.query(func.count(models.SaleRecord.id)).filter(models.SaleRecord.user_id == user.id).scalar() or 0
+    if sales_count == 0:
+        try:
+            import pandas as pd
+            csv_path = Path(__file__).parent.parent / "mock_sales_data.csv"
+            if csv_path.exists():
+                df = pd.read_csv(csv_path)
+                records = [
+                    models.SaleRecord(
+                        transaction_date=pd.to_datetime(row['Date']),
+                        product_category=row['Category'],
+                        product_name=row['Product Name'],
+                        sales_volume=row['Quantity'],
+                        unit_price=row['Price'],
+                        platform_source=row['Platform'],
+                        user_id=user.id
+                    ) for _, row in df.iterrows()
+                ]
+                db.bulk_save_objects(records)
+                db.commit()
+        except Exception as seed_err:
+            print(f"Auto-seed error: {seed_err}")
+
     # Aggregate total revenue (volume * price)
     revenue_query = db.query(
         func.sum(models.SaleRecord.sales_volume * models.SaleRecord.unit_price)
