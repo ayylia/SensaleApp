@@ -127,7 +127,9 @@ export default function Dashboard() {
             Intelligent Pricing <br/><span style={{ color: C.berry }}>& Forecasting.</span>
           </h2>
           <p style={{ fontSize: '16px', color: C.muted, margin: '0 0 32px', lineHeight: 1.6, maxWidth: '440px', fontWeight: 500 }}>
-            Sensale empowers micro-online sellers with data-driven price recommendations and intelligent demand forecasting.          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start w-full max-w-xs sm:max-w-none mx-auto md:mx-0">
+            Sensale empowers micro-online sellers with data-driven price recommendations and intelligent demand forecasting.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start w-full max-w-xs sm:max-w-none mx-auto md:mx-0">
             <button className="btn-primary hover:scale-105 transition-transform" style={{ padding: '14px 28px', fontSize: '15px', borderRadius: '14px', background: C.berry, boxShadow: '0 10px 20px rgba(217,22,86,0.2)' }} onClick={() => navigate('/forecast')}>
               Demand Forecast
             </button>
@@ -138,7 +140,7 @@ export default function Dashboard() {
             }} onClick={() => navigate('/pricewars')}>
               Price Recommender
             </button>
-          </div>          </div>
+          </div>
         </div>
 
         <div className="hidden md:flex flex-1 min-w-[300px] justify-center p-6">
