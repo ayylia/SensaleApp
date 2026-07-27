@@ -63,16 +63,15 @@ export default function Dashboard() {
     try { 
       const r = await apiClient.get('/api/dashboard-data'); 
       setData(r.data); 
+      setLoading(false);
     } catch (e) { 
       console.error(e); 
       if (retries > 0) {
-        console.log(`Retrying backend connection... (${retries} attempts left)`);
-        setTimeout(() => fetchData(retries - 1), 3000);
+        setTimeout(() => fetchData(retries - 1), 2000);
       } else {
         setData(null);
+        setLoading(false);
       }
-    } finally { 
-      if (retries === 0) setLoading(false); 
     }
   }, []);
 
