@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────
+   SENSALE — Sophisticated Sales Analytics
+   Theme: Professional Apparel Business
+   Palette: Deep Berry, Neutral Gray, Pure White
+   ───────────────────────────────────────────────────────── */
+
+:root {
+  --berry: #B00058;
+  --bg: #F8F9FA;
+  --white: #ffffff;
+  --text: #1F2937;
+  --muted: #6B7280;
+  --border: #E5E7EB;
+  font-family: 'Outfit', sans-serif !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif !important;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Minimalist Business Cards ── */
+.business-card {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+.business-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  border-color: var(--berry);
+}
+
+/* ── Typography ── */
+.title-font {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text);
+}
+
+.accent-text {
+  color: var(--berry);
+  font-weight: 700;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  background: white;
+  border-right: 1px solid var(--border);
+  padding: 32px 20px;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  background-color: var(--berry);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+/* ── Animations ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--berry); }
+
+/* ── Print Styles ── */
+@media print {
+  .sidebar, header, nav, .print\:hidden, button {
+    display: none !important;
+  }
+  
+  /* Force all scrolling containers to expand for printing */
+  html, body, #root, [style*="100vh"] {
+    height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  main {
+    overflow: visible !important;
+    height: auto !important;
+    background: white !important;
+    position: static !important;
+    flex: none !important;
+  }
+
+  .business-card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  * {
+    color: #000 !important;
+  }
+}

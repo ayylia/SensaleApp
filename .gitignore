@@ -1,0 +1,28 @@
+# Ignore all confidential Thesis PDF drafts, PowerPoints, and text reports
+*.pdf
+*.pptx
+*.docx
+*.doc
+proposal_text*.txt
+*_report.txt
+*_Report.md
+*_Pages.md
+diff_*.txt
+*.png
+*.py
+!.gitignore
+
+# Ignore secrets and environment variables
+.env
+*.env
+SensaleApp/backend/.env
+
+# Ignore node_modules & build artifacts
+node_modules/
+dist/
+dev-dist/
+__pycache__/
+*.pyc
+venv/
+.venv/
+.DS_Store
