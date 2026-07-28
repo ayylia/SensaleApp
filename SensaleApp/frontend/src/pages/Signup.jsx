@@ -25,17 +25,25 @@ export default function Signup() {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const token = await userCredential.user.getIdToken();
       
-      await apiClient.post("/api/users/sync", {
+      // Sync user to backend non-blockingly so Render backend cold start doesn't freeze signup
+      apiClient.post("/api/users/sync", {
         firebase_uid: userCredential.user.uid,
         email: email,
         username: username
       }, {
-        headers: { Authorization: `Bearer ${token}` }
+        headers: { Authorization: `Bearer ${token}` },
+        timeout: 5000
+      }).catch(syncErr => {
+        console.warn("Backend user sync skipped/warning:", syncErr);
       });
-      
+
       navigate("/dashboard");
     } catch (err) {
-      setError("Failed to create an account. " + err.message);
+      if (err.code === 'auth/email-already-in-use') {
+        setError("Account already exists! Please click 'Sign In' below.");
+      } else {
+        setError("Failed to create an account. " + err.message);
+      }
       setLoading(false);
     }
   };
