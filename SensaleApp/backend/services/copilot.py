@@ -192,7 +192,7 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
         if result:
             return f"🏆 Your **best selling product** is **{result.product_name}** with **{int(result.total_vol):,} units sold** in total!"
 
-    # Best Platform
+    # Platform Performance
     if any(w in msg for w in ["which platform", "best platform", "channel", "shopee", "tiktok", "instagram"]):
         result = db.query(
             SaleRecord.platform_source,
@@ -203,9 +203,44 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
         if result:
             return f"📱 Your **best performing platform** is **{result.platform_source}** with **{int(result.total_vol):,} units** sold."
 
+    # Worst Selling Product
+    if any(w in msg for w in ["worst", "lowest", "slow", "least"]):
+        result = db.query(
+            SaleRecord.product_name,
+            func.sum(SaleRecord.sales_volume).label("total_vol")
+        ).filter(SaleRecord.user_id == user_id).group_by(
+            SaleRecord.product_name
+        ).order_by(func.sum(SaleRecord.sales_volume).asc()).first()
+        if result:
+            return f"📉 Your **lowest performing product** is **{result.product_name}** with only **{int(result.total_vol):,} units sold**. Consider bundling it or running a flash discount!"
+
+    # Restock / Inventory / Demand Horizon
+    if any(w in msg for w in ["restock", "predict", "next week", "demand", "stock", "order"]):
+        return "📈 Check your **Forecast** tab! Our **Holt-Winters time-series model** projects 7-day sales demand so you can restock inventory before peak periods!"
+
+    # Pricing & Margin Protection
+    if any(w in msg for w in ["price", "pricing", "margin", "cost", "charge"]):
+        return "💡 Sensale's **Linear Regression model** analyzes price elasticity of demand to recommend optimal selling prices that protect your profit margins!"
+
+    # Fun / Casual / Pets / Cats
+    if any(w in msg for w in ["cat", "dog", "pet", "cute", "animal", "fun", "joke"]):
+        return "🐱 Cats make adorable store mascots! If you're thinking of launching pet apparel or accessories on Shopee or TikTok Shop, use Sensale to track your inventory & demand! 🐾"
+
+    # Help & Capabilities
+    if any(w in msg for w in ["help", "what can", "feature"]):
+        return (
+            "🤖 Here is what I can analyze for your store:\n\n"
+            "• **Best seller:** 'What is my best selling product?'\n"
+            "• **Revenue:** 'What is my total revenue?'\n"
+            "• **Platform:** 'Which platform sells the most?'\n"
+            "• **Worst seller:** 'What is my worst performing product?'\n"
+            "• **Restock:** 'What should I restock next week?'\n"
+            "• **Pricing:** 'What price should I charge?'"
+        )
+
     # General Out-of-Scope / Strategy Advice Fallback
     return (
-        f"💡 That's a great business question! While I specialise in analyzing your **RM{float(rev):,.2f}** sales data, "
-        "I recommend checking your **Forecast** and **Price Strategy** tabs to optimize your product margins and stock levels. "
+        f"💡 That's an interesting question! Based on your current revenue of **RM{float(rev):,.2f}**, "
+        "I recommend checking your **Forecast** and **Price Strategy** tabs to optimize your product margins and inventory levels. "
         "You can also ask me about your best-selling products, revenue, or platform performance! 🚀"
     )
