@@ -13,7 +13,21 @@ import AdminDashboard from "./pages/AdminDashboard";
 import MainLayout from "./components/MainLayout";
 import PWAInstallPrompt from "./components/PWAInstallPrompt";
 import axios from 'axios';
+import { useEffect } from 'react';
 import { auth } from './firebase';
+
+// ── Simple in-memory cache so pages don't re-fetch on every navigation ──
+export const pageCache = {};
+const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
+export function getCached(key) {
+  const entry = pageCache[key];
+  if (!entry) return null;
+  if (Date.now() - entry.ts > CACHE_TTL_MS) { delete pageCache[key]; return null; }
+  return entry.data;
+}
+export function setCached(key, data) {
+  pageCache[key] = { data, ts: Date.now() };
+}
 
 const fallbackUrl = import.meta.env.VITE_API_URL || (
   window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
@@ -41,6 +55,14 @@ const PrivateRoute = ({ children }) => {
 };
 
 function App() {
+  // Keep-alive ping every 10 minutes so Render never goes cold
+  useEffect(() => {
+    const ping = () => axios.get('https://sensaleapp.onrender.com/health').catch(() => {});
+    ping(); // ping on app load
+    const id = setInterval(ping, 10 * 60 * 1000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <AuthProvider>
       <PWAInstallPrompt />

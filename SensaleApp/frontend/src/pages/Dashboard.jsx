@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { apiClient } from "../App";
+import { getCached, setCached } from "../App";
 import FileUploader from "../components/FileUploader";
 import { AlertCircle, UploadCloud, Activity, Sparkles, Swords, TrendingUp, ArrowRight, Download, Printer } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -58,19 +59,28 @@ export default function Dashboard() {
   const [refreshKey, setRefreshKey] = useState(0);
   const navigate = useNavigate();
 
-  const fetchData = useCallback(async (retries = 3) => {
-    setLoading(true);
+  const fetchData = useCallback(async (retries = 3, silent = false) => {
+    // Show cached data instantly if available
+    const cached = getCached('dashboard');
+    if (cached && !silent) {
+      setData(cached);
+      setLoading(false);
+      // Still refresh silently in background
+      fetchData(3, true);
+      return;
+    }
+    if (!silent) setLoading(true);
     try { 
       const r = await apiClient.get('/api/dashboard-data'); 
-      setData(r.data); 
+      setData(r.data);
+      setCached('dashboard', r.data);
       setLoading(false);
     } catch (e) { 
       console.error(e); 
       if (retries > 0) {
-        setTimeout(() => fetchData(retries - 1), 2000);
+        setTimeout(() => fetchData(retries - 1, silent), 2000);
       } else {
-        setData(null);
-        setLoading(false);
+        if (!silent) { setData(null); setLoading(false); }
       }
     }
   }, []);
