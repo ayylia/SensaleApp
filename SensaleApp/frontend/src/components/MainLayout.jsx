@@ -354,36 +354,36 @@ export default function MainLayout() {
         <div className="pb-32 xl:pb-0">
           <Outlet />
         </div>
-
-        {/* Mobile Bottom Nav */}
-        <nav className="xl:hidden" style={{
-          position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 50,
-          background: '#fff',
-          borderTop: `1px solid ${C.border}`,
-          paddingBottom: 'env(safe-area-inset-bottom)'
-        }}>
-          <div style={{ display: 'flex', height: '64px' }}>
-            {NAV_ITEMS.map(item => {
-              // Strict Separation of Roles
-              if (isAdmin && item.path !== '/admin') return null;
-              if (!isAdmin && item.path === '/admin') return null;
-              
-              const active = isActive(item.path);
-              return (
-                <button key={item.name} onClick={() => navigate(item.path)}
-                  style={{
-                    flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '4px',
-                    background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit',
-                    color: active ? C.berry : C.muted, position: 'relative', transition: 'color 0.2s'
-                  }}>
-                  <item.icon style={{ width: '18px', height: '18px', color: active ? C.berry : C.muted }} />
-                  <span style={{ fontSize: '9px', fontWeight: 800, letterSpacing: '1px', textTransform: 'uppercase' }}>{item.name}</span>
-                </button>
-              );
-            })}
-          </div>
-        </nav>
       </main>
+
+      {/* Mobile Bottom Nav */}
+      <nav className="xl:hidden" style={{
+        position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 9999,
+        background: '#fff',
+        borderTop: `1px solid ${C.border}`,
+        paddingBottom: 'env(safe-area-inset-bottom)'
+      }}>
+        <div style={{ display: 'flex', height: '64px' }}>
+          {NAV_ITEMS.map(item => {
+            // Strict Separation of Roles
+            if (isAdmin && item.path !== '/admin') return null;
+            if (!isAdmin && item.path === '/admin') return null;
+            
+            const active = isActive(item.path);
+            return (
+              <button key={item.name} onClick={() => navigate(item.path)}
+                style={{
+                  flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '4px',
+                  background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit',
+                  color: active ? C.berry : C.muted, position: 'relative', transition: 'color 0.2s'
+                }}>
+                <item.icon style={{ width: '18px', height: '18px', color: active ? C.berry : C.muted }} />
+                <span style={{ fontSize: '9px', fontWeight: 800, letterSpacing: '1px', textTransform: 'uppercase' }}>{item.name}</span>
+              </button>
+            );
+          })}
+        </div>
+      </nav>
 
       {/* ══ SEARCH DROPDOWN PORTAL ══ */}
       {showSearchDropdown && searchResults.length > 0 && (
