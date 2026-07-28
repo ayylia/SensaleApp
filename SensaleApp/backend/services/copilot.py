@@ -8,13 +8,16 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 import models
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # ── Gemini setup ──────────────────────────────────────────────────────────────
+api_key = os.getenv("GEMINI_API_KEY")
+
 try:
     import google.generativeai as genai
-    _api_key = os.getenv("GEMINI_API_KEY")
-    if _api_key:
-        genai.configure(api_key=_api_key)
-        _gemini_model = genai.GenerativeModel("gemini-pro")
+    if api_key:
+        genai.configure(api_key=api_key)
         GEMINI_AVAILABLE = True
     else:
         GEMINI_AVAILABLE = False
