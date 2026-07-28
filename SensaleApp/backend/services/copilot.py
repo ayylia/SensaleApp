@@ -167,9 +167,9 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
             }
             for k in keys_to_try:
                 for m_name in candidate_models:
-                    url = f"https://generativelanguage.googleapis.com/v1beta/models/{m_name}:generateContent?key={k}"
+                    url = f"https://generativelanguage.googleapis.com/v1beta/models/{m_name}:generateContent"
                     try:
-                        r = requests.post(url, headers=headers, json=body, timeout=12)
+                        r = requests.post(url, headers=headers, json=body, params={"key": k}, timeout=15)
                         if r.status_code == 200:
                             res_json = r.json()
                             candidates = res_json.get("candidates", [])
@@ -189,7 +189,7 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
         # Strategy B: New google-genai SDK
         try:
             from google import genai
-            client = genai.Client(api_key=api_key)
+            client = genai.Client(api_key=keys_to_try[0])
             for m_name in candidate_models:
                 try:
                     res = client.models.generate_content(model=m_name, contents=prompt)
@@ -203,7 +203,7 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
         # Strategy C: Legacy google.generativeai SDK
         try:
             import google.generativeai as legacy_genai
-            legacy_genai.configure(api_key=api_key)
+            legacy_genai.configure(api_key=keys_to_try[0])
             
             for m_name in candidate_models:
                 try:
@@ -230,12 +230,23 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
         func.sum(SaleRecord.sales_volume * SaleRecord.unit_price)
     ).filter(SaleRecord.user_id == user_id).scalar() or 0.0
 
-    # Total Revenue
+    # 1. Platform Performance (High Priority to prevent 'most' keyword hijacking)
+    if any(w in msg for w in ["platform", "channel", "shopee", "tiktok", "instagram"]):
+        result = db.query(
+            SaleRecord.platform_source,
+            func.sum(SaleRecord.sales_volume).label("total_vol")
+        ).filter(SaleRecord.user_id == user_id).group_by(
+            SaleRecord.platform_source
+        ).order_by(func.sum(SaleRecord.sales_volume).desc()).first()
+        if result:
+            return f"📱 Your **best performing platform** is **{result.platform_source}** with **{int(result.total_vol):,} units** sold."
+
+    # 2. Total Revenue
     if any(w in msg for w in ["revenue", "total", "earning", "money", "sales amount", "berapa"]):
         return f"💰 Your **total recorded revenue** is **RM{float(rev):,.2f}**. Check your Overview dashboard for the full channel breakdown!"
 
-    # Best Selling Product
-    if any(w in msg for w in ["best", "top", "popular", "most", "bestseller", "best seller"]):
+    # 3. Best Selling Product (Specific keywords only)
+    if any(w in msg for w in ["bestseller", "best seller", "best selling", "top selling", "top product", "best product", "most popular product", "best item"]):
         result = db.query(
             SaleRecord.product_name,
             func.sum(SaleRecord.sales_volume).label("total_vol")
