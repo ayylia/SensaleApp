@@ -1,0 +1,273 @@
+order_creation_date,item_category,product_name,quantity,deal_price,platform
+2024-01-01,Apparel,Printed Silk Shawl,3,35.0,Shopee
+2024-01-01,Accessories,Fashion Sunglasses,1,15.0,Shopee
+2024-01-01,Apparel,Printed Silk Shawl,2,35.0,Shopee
+2024-01-01,Accessories,Fashion Sunglasses,2,15.0,TikTok Shop
+2024-01-01,Accessories,Canvas Tote Bag,4,18.0,TikTok Shop
+2024-01-02,Accessories,Fashion Sunglasses,2,15.0,Instagram
+2024-01-02,Apparel,Printed Silk Shawl,1,35.0,Instagram
+2024-01-02,Apparel,Printed Silk Shawl,2,35.0,Shopee
+2024-01-02,Apparel,Basic Cotton Hijab,4,25.0,Shopee
+2024-01-02,Apparel,Printed Silk Shawl,4,35.0,TikTok Shop
+2024-01-02,Accessories,Canvas Tote Bag,2,18.0,TikTok Shop
+2024-01-03,Apparel,Basic Cotton Hijab,2,25.0,Instagram
+2024-01-03,Accessories,Fashion Sunglasses,3,15.0,Shopee
+2024-01-03,Apparel,Printed Silk Shawl,1,35.0,Shopee
+2024-01-03,Accessories,Canvas Tote Bag,4,18.0,TikTok Shop
+2024-01-03,Accessories,Fashion Sunglasses,2,15.0,TikTok Shop
+2024-01-04,Accessories,Fashion Sunglasses,1,15.0,Shopee
+2024-01-04,Accessories,Fashion Sunglasses,2,15.0,Shopee
+2024-01-04,Apparel,Basic Cotton Hijab,3,25.0,Shopee
+2024-01-04,Accessories,Canvas Tote Bag,3,18.0,TikTok Shop
+2024-01-05,Accessories,Fashion Sunglasses,1,15.0,Instagram
+2024-01-05,Accessories,Fashion Sunglasses,3,15.0,Instagram
+2024-01-05,Apparel,Printed Silk Shawl,1,35.0,Shopee
+2024-01-05,Accessories,Fashion Sunglasses,2,15.0,Shopee
+2024-01-05,Apparel,Basic Cotton Hijab,2,25.0,TikTok Shop
+2024-01-05,Accessories,Fashion Sunglasses,3,15.0,TikTok Shop
+2024-01-06,Accessories,Fashion Sunglasses,1,15.0,Instagram
+2024-01-06,Accessories,Fashion Sunglasses,3,15.0,Instagram
+2024-01-06,Apparel,Printed Silk Shawl,1,35.0,Shopee
+2024-01-06,Apparel,Basic Cotton Hijab,1,25.0,Shopee
+2024-01-06,Accessories,Canvas Tote Bag,5,18.0,TikTok Shop
+2024-01-07,Accessories,Fashion Sunglasses,1,15.0,Instagram
+2024-01-07,Apparel,Printed Silk Shawl,2,35.0,Shopee
+2024-01-07,Apparel,Printed Silk Shawl,1,35.0,TikTok Shop
+2024-01-07,Apparel,Printed Silk Shawl,3,35.0,TikTok Shop
+2024-01-08,Accessories,Canvas Tote Bag,1,18.0,Instagram
+2024-01-08,Accessories,Canvas Tote Bag,1,18.0,Instagram
+2024-01-08,Accessories,Canvas Tote Bag,4,18.0,Shopee
+2024-01-08,Apparel,Printed Silk Shawl,3,35.0,TikTok Shop
+2024-01-09,Accessories,Fashion Sunglasses,2,15.0,Shopee
+2024-01-09,Accessories,Fashion Sunglasses,1,15.0,Shopee
+2024-01-09,Apparel,Printed Silk Shawl,1,35.0,TikTok Shop
+2024-01-09,Accessories,Canvas Tote Bag,2,18.0,TikTok Shop
+2024-01-10,Accessories,Fashion Sunglasses,3,15.0,Instagram
+2024-01-10,Accessories,Fashion Sunglasses,4,15.0,Shopee
+2024-01-10,Accessories,Canvas Tote Bag,2,18.0,TikTok Shop
+2024-01-11,Accessories,Canvas Tote Bag,2,18.0,Instagram
+2024-01-11,Accessories,Canvas Tote Bag,3,18.0,Shopee
+2024-01-11,Apparel,Printed Silk Shawl,3,35.0,TikTok Shop
+2024-01-12,Apparel,Basic Cotton Hijab,2,25.0,Instagram
+2024-01-12,Apparel,Basic Cotton Hijab,2,25.0,Shopee
+2024-01-12,Apparel,Basic Cotton Hijab,2,25.0,Shopee
+2024-01-12,Apparel,Basic Cotton Hijab,2,25.0,TikTok Shop
+2024-01-13,Accessories,Canvas Tote Bag,2,18.0,Instagram
+2024-01-13,Accessories,Canvas Tote Bag,3,18.0,Instagram
+2024-01-13,Accessories,Fashion Sunglasses,2,15.0,Shopee
+2024-01-13,Apparel,Printed Silk Shawl,2,35.0,TikTok Shop
+2024-01-13,Accessories,Fashion Sunglasses,5,15.0,TikTok Shop
+2024-01-14,Accessories,Fashion Sunglasses,2,15.0,Instagram
+2024-01-14,Apparel,Printed Silk Shawl,4,35.0,Shopee
+2024-01-14,Apparel,Printed Silk Shawl,4,35.0,Shopee
+2024-01-14,Apparel,Basic Cotton Hijab,2,25.0,TikTok Shop
+2024-01-14,Apparel,Basic Cotton Hijab,5,25.0,TikTok Shop
+2024-01-15,Accessories,Canvas Tote Bag,3,18.0,Instagram
+2024-01-15,Apparel,Printed Silk Shawl,2,35.0,Instagram
+2024-01-15,Apparel,Basic Cotton Hijab,7,23.75,Shopee
+2024-01-15,Apparel,Printed Silk Shawl,3,33.25,Shopee
+2024-01-15,Accessories,Fashion Sunglasses,3,14.25,Shopee
+2024-01-15,Accessories,Fashion Sunglasses,11,13.5,TikTok Shop
+2024-01-16,Apparel,Basic Cotton Hijab,1,25.0,Shopee
+2024-01-16,Accessories,Canvas Tote Bag,1,18.0,Shopee
+2024-01-16,Apparel,Basic Cotton Hijab,4,25.0,Shopee
+2024-01-16,Apparel,Basic Cotton Hijab,2,25.0,TikTok Shop
+2024-01-16,Accessories,Fashion Sunglasses,4,15.0,TikTok Shop
+2024-01-17,Apparel,Printed Silk Shawl,1,35.0,Instagram
+2024-01-17,Apparel,Printed Silk Shawl,2,35.0,Instagram
+2024-01-17,Apparel,Basic Cotton Hijab,2,25.0,Shopee
+2024-01-17,Accessories,Canvas Tote Bag,2,18.0,Shopee
+2024-01-17,Apparel,Printed Silk Shawl,2,35.0,TikTok Shop
+2024-01-18,Apparel,Basic Cotton Hijab,2,25.0,Instagram
+2024-01-18,Apparel,Printed Silk Shawl,3,35.0,Instagram
+2024-01-18,Apparel,Basic Cotton Hijab,2,25.0,Shopee
+2024-01-18,Apparel,Basic Cotton Hijab,5,25.0,TikTok Shop
+2024-01-19,Accessories,Fashion Sunglasses,2,15.0,Shopee
+2024-01-19,Apparel,Basic Cotton Hijab,1,25.0,Shopee
+2024-01-19,Apparel,Basic Cotton Hijab,4,25.0,Shopee
+2024-01-19,Accessories,Canvas Tote Bag,4,18.0,TikTok Shop
+2024-01-20,Apparel,Printed Silk Shawl,3,35.0,Instagram
+2024-01-20,Apparel,Basic Cotton Hijab,1,25.0,Shopee
+2024-01-20,Accessories,Canvas Tote Bag,1,18.0,Shopee
+2024-01-20,Apparel,Basic Cotton Hijab,3,25.0,Shopee
+2024-01-20,Apparel,Printed Silk Shawl,2,35.0,TikTok Shop
+2024-01-20,Accessories,Fashion Sunglasses,5,15.0,TikTok Shop
+2024-01-21,Apparel,Printed Silk Shawl,2,35.0,Instagram
+2024-01-21,Accessories,Fashion Sunglasses,2,15.0,Instagram
+2024-01-21,Accessories,Canvas Tote Bag,1,18.0,Shopee
+2024-01-21,Apparel,Printed Silk Shawl,3,35.0,Shopee
+2024-01-21,Accessories,Fashion Sunglasses,2,15.0,Shopee
+2024-01-21,Apparel,Printed Silk Shawl,2,35.0,TikTok Shop
+2024-01-21,Accessories,Fashion Sunglasses,2,15.0,TikTok Shop
+2024-01-22,Accessories,Canvas Tote Bag,1,18.0,Shopee
+2024-01-22,Accessories,Canvas Tote Bag,1,18.0,TikTok Shop
+2024-01-23,Accessories,Canvas Tote Bag,1,18.0,Instagram
+2024-01-23,Accessories,Canvas Tote Bag,1,18.0,Shopee
+2024-01-23,Accessories,Fashion Sunglasses,2,15.0,Shopee
+2024-01-23,Accessories,Canvas Tote Bag,4,18.0,TikTok Shop
+2024-01-23,Accessories,Canvas Tote Bag,1,18.0,TikTok Shop
+2024-01-24,Apparel,Basic Cotton Hijab,3,25.0,Shopee
+2024-01-24,Apparel,Basic Cotton Hijab,4,25.0,TikTok Shop
+2024-01-24,Apparel,Basic Cotton Hijab,3,25.0,TikTok Shop
+2024-01-25,Apparel,Basic Cotton Hijab,4,25.0,Shopee
+2024-01-25,Accessories,Fashion Sunglasses,4,15.0,TikTok Shop
+2024-01-26,Accessories,Fashion Sunglasses,2,15.0,Instagram
+2024-01-26,Apparel,Printed Silk Shawl,2,35.0,Instagram
+2024-01-26,Apparel,Printed Silk Shawl,4,35.0,Shopee
+2024-01-26,Accessories,Fashion Sunglasses,3,15.0,Shopee
+2024-01-26,Accessories,Canvas Tote Bag,2,18.0,Shopee
+2024-01-26,Accessories,Fashion Sunglasses,2,15.0,TikTok Shop
+2024-01-26,Apparel,Printed Silk Shawl,5,35.0,TikTok Shop
+2024-01-27,Accessories,Fashion Sunglasses,1,15.0,Instagram
+2024-01-27,Apparel,Basic Cotton Hijab,1,25.0,Shopee
+2024-01-27,Apparel,Basic Cotton Hijab,1,25.0,Shopee
+2024-01-27,Accessories,Fashion Sunglasses,3,15.0,Shopee
+2024-01-27,Accessories,Canvas Tote Bag,5,18.0,TikTok Shop
+2024-01-27,Accessories,Canvas Tote Bag,2,18.0,TikTok Shop
+2024-01-28,Accessories,Fashion Sunglasses,4,14.25,Shopee
+2024-01-28,Apparel,Basic Cotton Hijab,11,22.5,TikTok Shop
+2024-01-28,Apparel,Basic Cotton Hijab,12,22.5,TikTok Shop
+2024-01-29,Accessories,Fashion Sunglasses,3,15.0,Shopee
+2024-01-29,Accessories,Canvas Tote Bag,4,18.0,Shopee
+2024-01-29,Apparel,Printed Silk Shawl,1,35.0,Shopee
+2024-01-29,Accessories,Fashion Sunglasses,4,15.0,TikTok Shop
+2024-01-30,Accessories,Canvas Tote Bag,3,18.0,Instagram
+2024-01-30,Apparel,Printed Silk Shawl,3,35.0,Instagram
+2024-01-30,Apparel,Basic Cotton Hijab,3,25.0,Shopee
+2024-01-30,Apparel,Basic Cotton Hijab,1,25.0,Shopee
+2024-01-30,Apparel,Printed Silk Shawl,3,35.0,Shopee
+2024-01-30,Apparel,Printed Silk Shawl,5,35.0,TikTok Shop
+2024-01-31,Accessories,Canvas Tote Bag,1,18.0,Instagram
+2024-01-31,Apparel,Basic Cotton Hijab,2,25.0,Shopee
+2024-01-31,Apparel,Printed Silk Shawl,1,35.0,Shopee
+2024-01-31,Apparel,Printed Silk Shawl,4,35.0,Shopee
+2024-01-31,Apparel,Printed Silk Shawl,4,35.0,TikTok Shop
+2024-02-01,Apparel,Basic Cotton Hijab,3,25.0,Instagram
+2024-02-01,Apparel,Printed Silk Shawl,2,35.0,Shopee
+2024-02-01,Accessories,Fashion Sunglasses,4,15.0,TikTok Shop
+2024-02-01,Apparel,Basic Cotton Hijab,2,25.0,TikTok Shop
+2024-02-02,Apparel,Printed Silk Shawl,1,35.0,Shopee
+2024-02-02,Apparel,Basic Cotton Hijab,3,25.0,Shopee
+2024-02-02,Apparel,Printed Silk Shawl,3,35.0,TikTok Shop
+2024-02-03,Accessories,Canvas Tote Bag,2,18.0,Instagram
+2024-02-03,Accessories,Canvas Tote Bag,3,18.0,Instagram
+2024-02-03,Apparel,Printed Silk Shawl,4,35.0,Shopee
+2024-02-03,Apparel,Printed Silk Shawl,2,35.0,Shopee
+2024-02-03,Accessories,Canvas Tote Bag,2,18.0,Shopee
+2024-02-03,Accessories,Canvas Tote Bag,4,18.0,TikTok Shop
+2024-02-03,Accessories,Canvas Tote Bag,2,18.0,TikTok Shop
+2024-02-04,Apparel,Printed Silk Shawl,2,35.0,Instagram
+2024-02-04,Apparel,Printed Silk Shawl,2,35.0,Shopee
+2024-02-04,Apparel,Basic Cotton Hijab,4,25.0,Shopee
+2024-02-04,Accessories,Fashion Sunglasses,2,15.0,TikTok Shop
+2024-02-05,Apparel,Printed Silk Shawl,3,35.0,Instagram
+2024-02-05,Accessories,Fashion Sunglasses,1,15.0,Instagram
+2024-02-05,Apparel,Printed Silk Shawl,2,35.0,Shopee
+2024-02-05,Apparel,Basic Cotton Hijab,1,25.0,Shopee
+2024-02-05,Accessories,Fashion Sunglasses,1,15.0,TikTok Shop
+2024-02-05,Accessories,Canvas Tote Bag,2,18.0,TikTok Shop
+2024-02-06,Apparel,Printed Silk Shawl,3,35.0,Instagram
+2024-02-06,Accessories,Canvas Tote Bag,1,18.0,Shopee
+2024-02-06,Apparel,Printed Silk Shawl,2,35.0,Shopee
+2024-02-06,Accessories,Canvas Tote Bag,1,18.0,Shopee
+2024-02-06,Apparel,Basic Cotton Hijab,4,25.0,TikTok Shop
+2024-02-07,Apparel,Basic Cotton Hijab,2,25.0,Instagram
+2024-02-07,Accessories,Fashion Sunglasses,2,15.0,Shopee
+2024-02-07,Apparel,Printed Silk Shawl,3,35.0,Shopee
+2024-02-07,Apparel,Printed Silk Shawl,1,35.0,Shopee
+2024-02-07,Accessories,Fashion Sunglasses,2,15.0,TikTok Shop
+2024-02-07,Accessories,Canvas Tote Bag,4,18.0,TikTok Shop
+2024-02-08,Accessories,Canvas Tote Bag,1,18.0,Instagram
+2024-02-08,Apparel,Basic Cotton Hijab,1,25.0,Instagram
+2024-02-08,Accessories,Fashion Sunglasses,3,15.0,Shopee
+2024-02-08,Apparel,Basic Cotton Hijab,3,25.0,Shopee
+2024-02-08,Accessories,Fashion Sunglasses,1,15.0,Shopee
+2024-02-08,Accessories,Canvas Tote Bag,3,18.0,TikTok Shop
+2024-02-09,Accessories,Fashion Sunglasses,3,15.0,Shopee
+2024-02-09,Apparel,Printed Silk Shawl,3,35.0,Shopee
+2024-02-09,Apparel,Printed Silk Shawl,5,35.0,TikTok Shop
+2024-02-10,Apparel,Basic Cotton Hijab,1,25.0,Instagram
+2024-02-10,Accessories,Fashion Sunglasses,3,15.0,Instagram
+2024-02-10,Accessories,Canvas Tote Bag,3,18.0,Shopee
+2024-02-10,Apparel,Printed Silk Shawl,3,35.0,TikTok Shop
+2024-02-11,Accessories,Canvas Tote Bag,1,18.0,Instagram
+2024-02-11,Accessories,Canvas Tote Bag,3,18.0,Shopee
+2024-02-11,Accessories,Canvas Tote Bag,2,18.0,Shopee
+2024-02-11,Apparel,Printed Silk Shawl,4,35.0,TikTok Shop
+2024-02-11,Apparel,Basic Cotton Hijab,1,25.0,TikTok Shop
+2024-02-12,Accessories,Canvas Tote Bag,1,18.0,Instagram
+2024-02-12,Accessories,Canvas Tote Bag,2,18.0,Shopee
+2024-02-12,Accessories,Canvas Tote Bag,1,18.0,TikTok Shop
+2024-02-13,Apparel,Basic Cotton Hijab,2,25.0,Instagram
+2024-02-13,Apparel,Basic Cotton Hijab,2,25.0,Shopee
+2024-02-13,Apparel,Printed Silk Shawl,1,35.0,Shopee
+2024-02-13,Accessories,Canvas Tote Bag,5,18.0,TikTok Shop
+2024-02-14,Accessories,Fashion Sunglasses,3,15.0,Instagram
+2024-02-14,Apparel,Basic Cotton Hijab,9,23.75,Shopee
+2024-02-14,Accessories,Fashion Sunglasses,9,14.25,Shopee
+2024-02-14,Accessories,Fashion Sunglasses,5,13.5,TikTok Shop
+2024-02-14,Apparel,Basic Cotton Hijab,8,22.5,TikTok Shop
+2024-02-15,Apparel,Printed Silk Shawl,1,35.0,Instagram
+2024-02-15,Accessories,Fashion Sunglasses,2,15.0,Shopee
+2024-02-15,Apparel,Basic Cotton Hijab,2,25.0,TikTok Shop
+2024-02-16,Apparel,Printed Silk Shawl,3,35.0,Shopee
+2024-02-16,Accessories,Fashion Sunglasses,4,15.0,TikTok Shop
+2024-02-17,Accessories,Canvas Tote Bag,1,18.0,Instagram
+2024-02-17,Apparel,Printed Silk Shawl,2,35.0,Instagram
+2024-02-17,Accessories,Canvas Tote Bag,3,18.0,Shopee
+2024-02-17,Apparel,Basic Cotton Hijab,2,25.0,TikTok Shop
+2024-02-18,Apparel,Basic Cotton Hijab,3,25.0,Instagram
+2024-02-18,Apparel,Basic Cotton Hijab,4,25.0,Shopee
+2024-02-18,Apparel,Basic Cotton Hijab,2,25.0,Shopee
+2024-02-18,Accessories,Fashion Sunglasses,1,15.0,Shopee
+2024-02-18,Apparel,Printed Silk Shawl,2,35.0,TikTok Shop
+2024-02-19,Apparel,Printed Silk Shawl,4,35.0,Shopee
+2024-02-19,Apparel,Printed Silk Shawl,4,35.0,Shopee
+2024-02-19,Apparel,Basic Cotton Hijab,1,25.0,TikTok Shop
+2024-02-19,Apparel,Basic Cotton Hijab,4,25.0,TikTok Shop
+2024-02-20,Accessories,Fashion Sunglasses,2,15.0,Shopee
+2024-02-20,Accessories,Canvas Tote Bag,4,18.0,Shopee
+2024-02-20,Apparel,Basic Cotton Hijab,2,25.0,Shopee
+2024-02-20,Accessories,Fashion Sunglasses,2,15.0,TikTok Shop
+2024-02-21,Apparel,Printed Silk Shawl,1,35.0,Shopee
+2024-02-21,Apparel,Basic Cotton Hijab,2,25.0,Shopee
+2024-02-21,Accessories,Canvas Tote Bag,2,18.0,Shopee
+2024-02-21,Apparel,Printed Silk Shawl,4,35.0,TikTok Shop
+2024-02-21,Apparel,Basic Cotton Hijab,1,25.0,TikTok Shop
+2024-02-22,Apparel,Printed Silk Shawl,1,35.0,Instagram
+2024-02-22,Apparel,Printed Silk Shawl,2,35.0,Shopee
+2024-02-22,Accessories,Fashion Sunglasses,4,15.0,Shopee
+2024-02-22,Apparel,Basic Cotton Hijab,3,25.0,Shopee
+2024-02-22,Apparel,Printed Silk Shawl,3,35.0,TikTok Shop
+2024-02-23,Accessories,Fashion Sunglasses,2,15.0,Shopee
+2024-02-23,Accessories,Canvas Tote Bag,1,18.0,Shopee
+2024-02-23,Apparel,Basic Cotton Hijab,1,25.0,Shopee
+2024-02-23,Apparel,Basic Cotton Hijab,1,25.0,TikTok Shop
+2024-02-24,Apparel,Printed Silk Shawl,3,35.0,Instagram
+2024-02-24,Accessories,Fashion Sunglasses,3,15.0,Shopee
+2024-02-24,Apparel,Basic Cotton Hijab,1,25.0,Shopee
+2024-02-24,Apparel,Printed Silk Shawl,1,35.0,Shopee
+2024-02-24,Accessories,Fashion Sunglasses,3,15.0,TikTok Shop
+2024-02-24,Apparel,Basic Cotton Hijab,4,25.0,TikTok Shop
+2024-02-25,Accessories,Canvas Tote Bag,3,18.0,Instagram
+2024-02-25,Apparel,Basic Cotton Hijab,3,25.0,Instagram
+2024-02-25,Accessories,Fashion Sunglasses,2,15.0,Shopee
+2024-02-25,Accessories,Canvas Tote Bag,2,18.0,Shopee
+2024-02-25,Accessories,Fashion Sunglasses,4,15.0,TikTok Shop
+2024-02-26,Accessories,Canvas Tote Bag,2,18.0,Instagram
+2024-02-26,Apparel,Printed Silk Shawl,2,35.0,Shopee
+2024-02-26,Apparel,Basic Cotton Hijab,2,25.0,Shopee
+2024-02-26,Accessories,Fashion Sunglasses,4,15.0,Shopee
+2024-02-26,Accessories,Canvas Tote Bag,1,18.0,TikTok Shop
+2024-02-26,Accessories,Fashion Sunglasses,3,15.0,TikTok Shop
+2024-02-27,Apparel,Printed Silk Shawl,4,35.0,Shopee
+2024-02-27,Accessories,Canvas Tote Bag,2,18.0,Shopee
+2024-02-27,Apparel,Basic Cotton Hijab,5,25.0,TikTok Shop
+2024-02-27,Apparel,Printed Silk Shawl,3,35.0,TikTok Shop
+2024-02-28,Accessories,Fashion Sunglasses,10,14.25,Shopee
+2024-02-28,Accessories,Canvas Tote Bag,8,16.2,TikTok Shop
+2024-02-29,Apparel,Basic Cotton Hijab,1,25.0,Shopee
+2024-02-29,Accessories,Canvas Tote Bag,2,18.0,Shopee
+2024-02-29,Accessories,Fashion Sunglasses,1,15.0,Shopee
+2024-02-29,Apparel,Printed Silk Shawl,4,35.0,TikTok Shop
+2024-02-29,Apparel,Basic Cotton Hijab,3,25.0,TikTok Shop

@@ -91,22 +91,24 @@ def get_dashboard_summary(user_data: dict = Depends(verify_firebase_token), db: 
     sales_count = db.query(func.count(models.SaleRecord.id)).filter(models.SaleRecord.user_id == user.id).scalar() or 0
     if sales_count == 0:
         try:
-            import pandas as pd
-            csv_path = Path(__file__).parent.parent / "mock_sales_data.csv"
-            if csv_path.exists():
-                df = pd.read_csv(csv_path)
-                records = [
-                    models.SaleRecord(
-                        transaction_date=pd.to_datetime(row['Date']),
-                        product_category=row['Category'],
-                        product_name=row['Product Name'],
-                        sales_volume=row['Quantity'],
-                        unit_price=row['Price'],
-                        platform_source=row['Platform'],
-                        user_id=user.id
-                    ) for _, row in df.iterrows()
-                ]
-                db.bulk_save_objects(records)
+            from pathlib import Path
+            seed_files = [
+                Path(__file__).parent.parent / "Realistic_MicroSeller_Sales.csv",
+                Path(__file__).parent.parent / "sample_data" / "Realistic_MicroSeller_Sales.csv",
+                Path(__file__).parent.parent / "mock_sales_data.csv"
+            ]
+            
+            target_csv = None
+            for sf in seed_files:
+                if sf.exists():
+                    target_csv = sf
+                    break
+
+            if target_csv:
+                with open(target_csv, "rb") as f:
+                    file_bytes = f.read()
+                records = process_sales_file(file_bytes, user.id)
+                db.bulk_insert_mappings(models.SaleRecord, records)
                 db.commit()
         except Exception as seed_err:
             print(f"Auto-seed error: {seed_err}")
