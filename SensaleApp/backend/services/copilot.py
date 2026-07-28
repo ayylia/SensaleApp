@@ -133,7 +133,18 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
             genai.configure(api_key=api_key)
             
             context = _build_sales_context(db, user_id, SaleRecord)
-            prompt  = context + f"\nUser Question: {message}\nSensale AI Response:"
+            
+            # Formulate robust prompt for both full questions and short/single-word messages
+            if len(message.strip().split()) <= 2:
+                prompt = (
+                    context + 
+                    f"\nUser Query: {message}\n"
+                    f"Note: The user entered a short word/topic '{message}'. "
+                    f"Answer conversationally and creatively as Sensale AI Assistant, then relate it back to business growth and their sales data!\n"
+                    f"Sensale AI Response:"
+                )
+            else:
+                prompt = context + f"\nUser Question: {message}\nSensale AI Response:"
             
             candidate_models = ["gemini-1.5-flash", "gemini-2.0-flash", "gemini-1.5-pro", "gemini-pro"]
             
@@ -141,8 +152,18 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
                 try:
                     m = genai.GenerativeModel(m_name)
                     res = m.generate_content(prompt)
-                    if res and res.text:
-                        return res.text.strip()
+                    
+                    # Safely extract text without triggering SDK safety accessor exception
+                    if res:
+                        try:
+                            if res.text:
+                                return res.text.strip()
+                        except Exception:
+                            if res.candidates and len(res.candidates) > 0:
+                                parts = getattr(res.candidates[0].content, 'parts', [])
+                                text_out = "".join([getattr(p, 'text', '') for p in parts])
+                                if text_out.strip():
+                                    return text_out.strip()
                 except Exception as m_err:
                     print(f"Gemini model '{m_name}' attempt failed: {m_err}")
                     continue
