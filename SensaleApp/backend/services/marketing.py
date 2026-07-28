@@ -73,16 +73,25 @@ def generate_marketing_copy(db: Session, user_id: int, SaleRecord, product_name:
             - Include relevant hashtags.
             """
             
-            response = _gemini_model.generate_content(prompt)
-            # Try to parse JSON from response
-            text = response.text.strip()
-            # Handle potential markdown code blocks in Gemini response
-            if "```json" in text:
-                text = text.split("```json")[1].split("```")[0].strip()
-            elif "```" in text:
-                text = text.split("```")[1].split("```")[0].strip()
-                
-            ai_copy = json.loads(text)
+            response = None
+            for m_name in ["gemini-1.5-flash", "gemini-2.0-flash", "gemini-1.5-pro", "gemini-pro"]:
+                try:
+                    m = genai.GenerativeModel(m_name)
+                    res = m.generate_content(prompt)
+                    if res and res.text:
+                        response = res
+                        break
+                except Exception:
+                    continue
+
+            if response and response.text:
+                text = response.text.strip()
+                if "```json" in text:
+                    text = text.split("```json")[1].split("```")[0].strip()
+                elif "```" in text:
+                    text = text.split("```")[1].split("```")[0].strip()
+                    
+                ai_copy = json.loads(text)
             
             return {
                 "product_name": product_name,

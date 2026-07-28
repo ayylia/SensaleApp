@@ -121,49 +121,30 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
 
     # 2. Try Gemini AI (The Primary Engine)
     api_key = os.getenv("GEMINI_API_KEY")
-    if not api_key:
-        return "⚠️ Sensale AI Error: No Gemini API Key found. Please check your .env file!"
-
-    try:
-        import google.generativeai as genai
-        genai.configure(api_key=api_key)
-        
-        # Dynamically find an available model on this machine/key
-        model_to_use = None
+    if api_key:
         try:
-            available_models = [m.name for m in genai.list_models() if 'generateContent' in m.supported_generation_methods]
-            if available_models:
-                # Prioritize 1.5-flash if available, otherwise take the first one
-                flash_models = [m for m in available_models if "flash" in m]
-                best_model_name = flash_models[0] if flash_models else available_models[0]
-                model_to_use = genai.GenerativeModel(best_model_name)
-        except Exception as list_err:
-            print(f"List models failed: {list_err}")
-            # Fallback to guessing if list_models fails (some API keys restrict listing)
-            for guestimate in ["gemini-1.5-flash", "gemini-pro"]:
+            import google.generativeai as genai
+            genai.configure(api_key=api_key)
+            
+            context = _build_sales_context(db, user_id, SaleRecord)
+            prompt  = context + f"\nUser Question: {message}\nSensale AI Response:"
+            
+            # Robust model fallback list (1.5-flash -> 2.0-flash -> 1.5-pro -> gemini-pro)
+            candidate_models = ["gemini-1.5-flash", "gemini-2.0-flash", "gemini-1.5-pro", "gemini-pro"]
+            
+            for m_name in candidate_models:
                 try:
-                    m = genai.GenerativeModel(guestimate)
-                    m.generate_content("test", generation_config={"max_output_tokens": 1})
-                    model_to_use = m
-                    break
-                except: continue
-        
-        if not model_to_use:
-            return "⚠️ Sensale AI Error: Your API key doesn't seem to have access to any Gemini models. Please check your Google AI Studio dashboard!"
+                    m = genai.GenerativeModel(m_name)
+                    res = m.generate_content(prompt)
+                    if res and res.text:
+                        return res.text.strip()
+                except Exception as m_err:
+                    print(f"Gemini model '{m_name}' attempt failed: {m_err}")
+                    continue
+        except Exception as e:
+            print(f"Gemini API Exception: {e}")
 
-        context = _build_sales_context(db, user_id, SaleRecord)
-        prompt  = context + f"\nUser Question: {message}\nSensale AI Response:"
-        response = model_to_use.generate_content(prompt)
-        
-        if response and response.text:
-            return response.text.strip()
-        else:
-            return "⚠️ Sensale AI: Gemini returned an empty response."
-    except Exception as e:
-        print(f"Gemini error: {e}")
-        return f"⚠️ Sensale AI Error: {str(e)}"
-    
-    # 3. Rule-based fallback (Only if Gemini fails or is unavailable)
+    # 3. Rule-based fallback (Guarantees zero crashes even if Gemini API returns 404/Quota error)
     # --- Total Revenue ---
 
     # 1. Total Revenue
