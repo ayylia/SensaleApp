@@ -1,8 +1,23 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 import os
+import re
 import sys
 from pathlib import Path
+
+
+def _clean_md(text: str) -> str:
+    """Strip raw markdown symbols so chat bubbles render clean plain text."""
+    if not text:
+        return text
+    # Remove bold/italic markers (**, *, __, _)
+    text = re.sub(r'\*{1,3}(.*?)\*{1,3}', r'\1', text)
+    text = re.sub(r'_{1,3}(.*?)_{1,3}', r'\1', text)
+    # Remove heading markers at start of lines
+    text = re.sub(r'(?m)^#{1,6}\s*', '', text)
+    # Remove inline code backticks
+    text = re.sub(r'`([^`]+)`', r'\1', text)
+    return text.strip()
 
 # Add backend to path to import models
 sys.path.append(str(Path(__file__).parent.parent))
@@ -177,7 +192,7 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
                                 parts = candidates[0].get("content", {}).get("parts", [])
                                 text_out = "".join([p.get("text", "") for p in parts if "text" in p])
                                 if text_out.strip():
-                                    return text_out.strip()
+                                    return _clean_md(text_out)
                         else:
                             print(f"Gemini REST '{m_name}' key failed ({r.status_code}): {r.text[:100]}")
                     except Exception as rest_err:
@@ -194,7 +209,7 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
                 try:
                     res = client.models.generate_content(model=m_name, contents=prompt)
                     if res and hasattr(res, 'text') and res.text:
-                        return res.text.strip()
+                        return _clean_md(res.text)
                 except Exception as g_err:
                     print(f"google.genai '{m_name}' failed: {g_err}")
         except Exception as new_sdk_err:
@@ -212,13 +227,13 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
                     if res:
                         try:
                             if res.text:
-                                return res.text.strip()
+                                return _clean_md(res.text)
                         except Exception:
                             if res.candidates and len(res.candidates) > 0:
                                 parts = getattr(res.candidates[0].content, 'parts', [])
                                 text_out = "".join([getattr(p, 'text', '') for p in parts])
                                 if text_out.strip():
-                                    return text_out.strip()
+                                    return _clean_md(text_out)
                 except Exception as m_err:
                     print(f"legacy genai '{m_name}' attempt failed: {m_err}")
                     continue
@@ -239,11 +254,11 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
             SaleRecord.platform_source
         ).order_by(func.sum(SaleRecord.sales_volume).desc()).first()
         if result:
-            return f"📱 Your **best performing platform** is **{result.platform_source}** with **{int(result.total_vol):,} units** sold."
+            return f"📱 Your best performing platform is {result.platform_source} with {int(result.total_vol):,} units sold."
 
     # 2. Total Revenue
     if any(w in msg for w in ["revenue", "total", "earning", "money", "sales amount", "berapa"]):
-        return f"💰 Your **total recorded revenue** is **RM{float(rev):,.2f}**. Check your Overview dashboard for the full channel breakdown!"
+        return f"💰 Your total recorded revenue is RM{float(rev):,.2f}. Check your Overview dashboard for the full channel breakdown!"
 
     # 3. Best Selling Product (Specific keywords only)
     if any(w in msg for w in ["bestseller", "best seller", "best selling", "top selling", "top product", "best product", "most popular product", "best item"]):
@@ -254,7 +269,7 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
             SaleRecord.product_name
         ).order_by(func.sum(SaleRecord.sales_volume).desc()).first()
         if result:
-            return f"🏆 Your **best selling product** is **{result.product_name}** with **{int(result.total_vol):,} units sold** in total!"
+            return f"🏆 Your best selling product is {result.product_name} with {int(result.total_vol):,} units sold in total!"
 
     # Platform Performance
     if any(w in msg for w in ["which platform", "best platform", "channel", "shopee", "tiktok", "instagram"]):
@@ -265,7 +280,7 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
             SaleRecord.platform_source
         ).order_by(func.sum(SaleRecord.sales_volume).desc()).first()
         if result:
-            return f"📱 Your **best performing platform** is **{result.platform_source}** with **{int(result.total_vol):,} units** sold."
+            return f"📱 Your best performing platform is {result.platform_source} with {int(result.total_vol):,} units sold."
 
     # Worst Selling Product
     if any(w in msg for w in ["worst", "lowest", "slow", "least"]):
@@ -276,30 +291,30 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
             SaleRecord.product_name
         ).order_by(func.sum(SaleRecord.sales_volume).asc()).first()
         if result:
-            return f"📉 Your **lowest performing product** is **{result.product_name}** with only **{int(result.total_vol):,} units sold**. Consider bundling it or running a flash discount!"
+            return f"📉 Your lowest performing product is {result.product_name} with only {int(result.total_vol):,} units sold. Consider bundling it or running a flash discount!"
 
     # Restock / Inventory / Demand Horizon / Seasonal Spikes
     if any(w in msg for w in ["season", "spike", "inventory", "raya", "event", "festival", "holiday", "restock", "predict", "next week", "demand", "stock", "order"]):
         return (
-            "🗓️ **Seasonal spikes** (like Raya, 11.11, or festive sales) increase product demand significantly!\n\n"
-            "In Sensale, you can go to the **Forecast** page to input a Seasonal Influence Factor (e.g. **1.5x for Raya**). "
-            "Our **Holt-Winters time-series algorithm** will automatically multiply your baseline predictions so you restock enough inventory before peak sales begin! 🚀"
+            "🗓️ Seasonal spikes (like Raya, 11.11, or festive sales) increase product demand significantly!\n\n"
+            "In Sensale, you can go to the Forecast page to input a Seasonal Influence Factor (e.g. 1.5x for Raya). "
+            "The Holt-Winters time-series algorithm will automatically multiply your baseline predictions so you restock enough inventory before peak sales begin! 🚀"
         )
 
     # Marketing & Growth Strategies (TikTok, Shopee, Instagram)
     if any(w in msg for w in ["marketing", "tiktok", "shopee", "instagram", "increase", "grow", "boost", "idea", "strategy", "advice", "tip"]):
         return (
-            "📢 **Multi-Channel Growth Strategy for Malaysian Sellers:**\n\n"
-            "• **TikTok Shop:** Post 15-second product demo videos using trending Malaysian audio clips.\n"
-            "• **Shopee:** Set up Vouchers & Flash Sales during Payday sales (25th of the month).\n"
-            "• **Instagram:** Use story polls and customer unboxing reviews to build trust and drive direct sales!\n\n"
-            "💡 Check your **Overview** page to see which of these 3 platforms brings in your highest revenue!"
+            "📢 Multi-Channel Growth Strategy for Malaysian Sellers:\n\n"
+            "• TikTok Shop: Post 15-second product demo videos using trending Malaysian audio clips.\n"
+            "• Shopee: Set up Vouchers & Flash Sales during Payday sales (25th of the month).\n"
+            "• Instagram: Use story polls and customer unboxing reviews to build trust and drive direct sales!\n\n"
+            "💡 Check your Overview page to see which of these 3 platforms brings in your highest revenue!"
         )
 
     # Pricing & Margin Protection
     if any(w in msg for w in ["price", "pricing", "margin", "cost", "charge", "profit"]):
         return (
-            "💡 Sensale's **Price Recommendation Engine** uses **Linear Regression** to analyze price elasticity of demand. "
+            "💡 Sensale's Price Recommendation Engine uses Linear Regression to analyze price elasticity of demand. "
             "It calculates the optimal selling price for each product to maximize total revenue while protecting your profit margins!"
         )
 
@@ -311,27 +326,27 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
     if any(w in msg for w in ["help", "what can", "feature"]):
         return (
             "🤖 Here is what I can analyze for your store:\n\n"
-            "• **Best seller:** 'What is my best selling product?'\n"
-            "• **Revenue:** 'What is my total revenue?'\n"
-            "• **Platform:** 'Which platform sells the most?'\n"
-            "• **Worst seller:** 'What is my worst performing product?'\n"
-            "• **Restock & Spikes:** 'How do seasonal spikes affect my inventory?'\n"
-            "• **Pricing:** 'What price should I charge?'"
+            "• Best seller: 'What is my best selling product?'\n"
+            "• Revenue: 'What is my total revenue?'\n"
+            "• Platform: 'Which platform sells the most?'\n"
+            "• Worst seller: 'What is my worst performing product?'\n"
+            "• Restock & Spikes: 'How do seasonal spikes affect my inventory?'\n"
+            "• Pricing: 'What price should I charge?'"
         )
 
     # Short fragments / typos ("gr", "how", "what", etc.)
     if len(msg) <= 3 or msg in ["how", "what", "why", "where", "who", "gr", "test", "huh"]:
         return (
             "👋 Hi there! I'm your Sensale AI Copilot. Ask me questions about your store like:\n\n"
-            "• **'What is my best selling product?'**\n"
-            "• **'What is my total revenue?'**\n"
-            "• **'Which platform sells the most?'**\n"
-            "• **'How do seasonal spikes affect my inventory?'**"
+            "• 'What is my best selling product?'\n"
+            "• 'What is my total revenue?'\n"
+            "• 'Which platform sells the most?'\n"
+            "• 'How do seasonal spikes affect my inventory?'"
         )
 
     # General Out-of-Scope / Strategy Advice Fallback
     return (
-        f"💡 Based on your recorded revenue of **RM{float(rev):,.2f}**, "
-        "I recommend checking your **Forecast** (Holt-Winters model) and **Price Strategy** (Linear Regression model) tabs "
+        f"💡 Based on your recorded revenue of RM{float(rev):,.2f}, "
+        "I recommend checking your Forecast (Holt-Winters model) and Price Strategy (Linear Regression model) tabs "
         "to optimize your product margins and inventory levels! 🚀"
     )
