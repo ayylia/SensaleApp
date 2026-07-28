@@ -231,13 +231,30 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
         if result:
             return f"📉 Your **lowest performing product** is **{result.product_name}** with only **{int(result.total_vol):,} units sold**. Consider bundling it or running a flash discount!"
 
-    # Restock / Inventory / Demand Horizon
-    if any(w in msg for w in ["restock", "predict", "next week", "demand", "stock", "order"]):
-        return "📈 Check your **Forecast** tab! Our **Holt-Winters time-series model** projects 7-day sales demand so you can restock inventory before peak periods!"
+    # Restock / Inventory / Demand Horizon / Seasonal Spikes
+    if any(w in msg for w in ["season", "spike", "inventory", "raya", "event", "festival", "holiday", "restock", "predict", "next week", "demand", "stock", "order"]):
+        return (
+            "🗓️ **Seasonal spikes** (like Raya, 11.11, or festive sales) increase product demand significantly!\n\n"
+            "In Sensale, you can go to the **Forecast** page to input a Seasonal Influence Factor (e.g. **1.5x for Raya**). "
+            "Our **Holt-Winters time-series algorithm** will automatically multiply your baseline predictions so you restock enough inventory before peak sales begin! 🚀"
+        )
+
+    # Marketing & Growth Strategies (TikTok, Shopee, Instagram)
+    if any(w in msg for w in ["marketing", "tiktok", "shopee", "instagram", "increase", "grow", "boost", "idea", "strategy", "advice", "tip"]):
+        return (
+            "📢 **Multi-Channel Growth Strategy for Malaysian Sellers:**\n\n"
+            "• **TikTok Shop:** Post 15-second product demo videos using trending Malaysian audio clips.\n"
+            "• **Shopee:** Set up Vouchers & Flash Sales during Payday sales (25th of the month).\n"
+            "• **Instagram:** Use story polls and customer unboxing reviews to build trust and drive direct sales!\n\n"
+            "💡 Check your **Overview** page to see which of these 3 platforms brings in your highest revenue!"
+        )
 
     # Pricing & Margin Protection
-    if any(w in msg for w in ["price", "pricing", "margin", "cost", "charge"]):
-        return "💡 Sensale's **Linear Regression model** analyzes price elasticity of demand to recommend optimal selling prices that protect your profit margins!"
+    if any(w in msg for w in ["price", "pricing", "margin", "cost", "charge", "profit"]):
+        return (
+            "💡 Sensale's **Price Recommendation Engine** uses **Linear Regression** to analyze price elasticity of demand. "
+            "It calculates the optimal selling price for each product to maximize total revenue while protecting your profit margins!"
+        )
 
     # Fun / Casual / Pets / Cats
     if any(w in msg for w in ["cat", "dog", "pet", "cute", "animal", "fun", "joke"]):
@@ -251,7 +268,7 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
             "• **Revenue:** 'What is my total revenue?'\n"
             "• **Platform:** 'Which platform sells the most?'\n"
             "• **Worst seller:** 'What is my worst performing product?'\n"
-            "• **Restock:** 'What should I restock next week?'\n"
+            "• **Restock & Spikes:** 'How do seasonal spikes affect my inventory?'\n"
             "• **Pricing:** 'What price should I charge?'"
         )
 
@@ -262,12 +279,12 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
             "• **'What is my best selling product?'**\n"
             "• **'What is my total revenue?'**\n"
             "• **'Which platform sells the most?'**\n"
-            "• **'What should I restock next week?'**"
+            "• **'How do seasonal spikes affect my inventory?'**"
         )
 
     # General Out-of-Scope / Strategy Advice Fallback
     return (
         f"💡 Based on your recorded revenue of **RM{float(rev):,.2f}**, "
-        "I recommend checking your **Forecast** and **Price Strategy** tabs to optimize your product margins and inventory levels. "
-        "You can also ask me about your best-selling products, revenue, or platform performance! 🚀"
+        "I recommend checking your **Forecast** (Holt-Winters model) and **Price Strategy** (Linear Regression model) tabs "
+        "to optimize your product margins and inventory levels! 🚀"
     )
