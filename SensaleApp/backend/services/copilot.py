@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ── Gemini setup ──────────────────────────────────────────────────────────────
-_FB_KEY = base64.b64decode("QVEuQWI4Uk42Sm5BcndOTWc3QVdwS3h0WTJPbWI4R1dpb3FZZjZQN2FaVmxQQzBMa25hWGc=").decode()
+_FB_KEY = base64.b64decode("QVEuQWI4Uk42SUUxcW9FX1FqcXVwNmtkX0ZqdGt3NlVJU1VWeEVhbnV3VW50aFl1QWstMFE=").decode()
 DEFAULT_API_KEY = os.getenv("GEMINI_API_KEY") or _FB_KEY
 
 try:
