@@ -132,8 +132,14 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
         )
 
     # 2. Try Gemini AI (The Primary Engine)
-    api_key = DEFAULT_API_KEY
-    if api_key:
+    keys_to_try = []
+    env_k = os.getenv("GEMINI_API_KEY")
+    if env_k and env_k.strip():
+        keys_to_try.append(env_k.strip())
+    if _FB_KEY and _FB_KEY.strip() not in keys_to_try:
+        keys_to_try.append(_FB_KEY.strip())
+
+    if keys_to_try:
         context = _build_sales_context(db, user_id, SaleRecord)
         
         # Formulate robust prompt for both full questions and short/single-word messages
@@ -148,7 +154,7 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
         else:
             prompt = context + f"\nUser Question: {message}\nSensale AI Response:"
 
-        candidate_models = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash-latest", "gemini-1.5-flash", "gemini-pro"]
+        candidate_models = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash", "gemini-1.5-pro"]
 
         # Strategy A: Direct HTTP REST Call (100% reliable across all Python versions without SDK dependency)
         try:
@@ -159,21 +165,24 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
                     "parts": [{"text": prompt}]
                 }]
             }
-            for m_name in ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash", "gemini-1.5-pro"]:
-                url = f"https://generativelanguage.googleapis.com/v1beta/models/{m_name}:generateContent?key={api_key}"
-                try:
-                    r = requests.post(url, headers=headers, json=body, timeout=12)
-                    if r.status_code == 200:
-                        res_json = r.json()
-                        candidates = res_json.get("candidates", [])
-                        if candidates:
-                            parts = candidates[0].get("content", {}).get("parts", [])
-                            text_out = "".join([p.get("text", "") for p in parts if "text" in p])
-                            if text_out.strip():
-                                return text_out.strip()
-                except Exception as rest_err:
-                    print(f"Gemini REST '{m_name}' failed: {rest_err}")
-                    continue
+            for k in keys_to_try:
+                for m_name in candidate_models:
+                    url = f"https://generativelanguage.googleapis.com/v1beta/models/{m_name}:generateContent?key={k}"
+                    try:
+                        r = requests.post(url, headers=headers, json=body, timeout=12)
+                        if r.status_code == 200:
+                            res_json = r.json()
+                            candidates = res_json.get("candidates", [])
+                            if candidates:
+                                parts = candidates[0].get("content", {}).get("parts", [])
+                                text_out = "".join([p.get("text", "") for p in parts if "text" in p])
+                                if text_out.strip():
+                                    return text_out.strip()
+                        else:
+                            print(f"Gemini REST '{m_name}' key failed ({r.status_code}): {r.text[:100]}")
+                    except Exception as rest_err:
+                        print(f"Gemini REST '{m_name}' failed: {rest_err}")
+                        continue
         except Exception as rest_exception:
             print(f"Gemini REST Exception: {rest_exception}")
 
