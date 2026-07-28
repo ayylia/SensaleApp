@@ -10,6 +10,28 @@ const SUGGESTED_PROMPTS = [
   "What is my worst performing product?",
 ];
 
+function renderFormattedText(text) {
+  if (!text) return null;
+  const lines = text.split("\n");
+  return lines.map((line, lIdx) => {
+    const parts = line.split(/(\*\*.*?\*\*)/g);
+    return (
+      <span key={lIdx} className="block mb-1">
+        {parts.map((part, pIdx) => {
+          if (part.startsWith("**") && part.endsWith("**")) {
+            return (
+              <strong key={pIdx} className="font-extrabold text-slate-900 bg-sky-50/80 px-1 py-0.5 rounded border border-sky-100">
+                {part.slice(2, -2)}
+              </strong>
+            );
+          }
+          return part;
+        })}
+      </span>
+    );
+  });
+}
+
 function ChatBubble({ message }) {
   const isBot = message.role === "bot";
   return (
@@ -25,9 +47,8 @@ function ChatBubble({ message }) {
             ? "bg-white border border-slate-100 text-slate-700 rounded-bl-sm"
             : "bg-gradient-to-r from-sky-500 to-indigo-500 text-white rounded-br-sm"
         }`}
-        style={{ whiteSpace: "pre-line" }}
       >
-        {message.text}
+        {isBot ? renderFormattedText(message.text) : message.text}
       </div>
       {!isBot && (
         <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-rose-400 to-orange-400 flex-shrink-0 flex items-center justify-center shadow-md">
