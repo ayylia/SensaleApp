@@ -150,7 +150,34 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
 
         candidate_models = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash-latest", "gemini-1.5-flash", "gemini-pro"]
 
-        # Strategy A: New google-genai SDK
+        # Strategy A: Direct HTTP REST Call (100% reliable across all Python versions without SDK dependency)
+        try:
+            import requests
+            headers = {"Content-Type": "application/json"}
+            body = {
+                "contents": [{
+                    "parts": [{"text": prompt}]
+                }]
+            }
+            for m_name in ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash", "gemini-1.5-pro"]:
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{m_name}:generateContent?key={api_key}"
+                try:
+                    r = requests.post(url, headers=headers, json=body, timeout=12)
+                    if r.status_code == 200:
+                        res_json = r.json()
+                        candidates = res_json.get("candidates", [])
+                        if candidates:
+                            parts = candidates[0].get("content", {}).get("parts", [])
+                            text_out = "".join([p.get("text", "") for p in parts if "text" in p])
+                            if text_out.strip():
+                                return text_out.strip()
+                except Exception as rest_err:
+                    print(f"Gemini REST '{m_name}' failed: {rest_err}")
+                    continue
+        except Exception as rest_exception:
+            print(f"Gemini REST Exception: {rest_exception}")
+
+        # Strategy B: New google-genai SDK
         try:
             from google import genai
             client = genai.Client(api_key=api_key)
@@ -164,7 +191,7 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
         except Exception as new_sdk_err:
             print(f"google.genai import/execution skipped: {new_sdk_err}")
 
-        # Strategy B: Legacy google.generativeai SDK
+        # Strategy C: Legacy google.generativeai SDK
         try:
             import google.generativeai as legacy_genai
             legacy_genai.configure(api_key=api_key)
