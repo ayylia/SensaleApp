@@ -148,7 +148,7 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
         else:
             prompt = context + f"\nUser Question: {message}\nSensale AI Response:"
 
-        candidate_models = ["gemini-2.0-flash", "gemini-1.5-flash", "gemini-1.5-pro", "gemini-pro"]
+        candidate_models = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash-latest", "gemini-1.5-flash", "gemini-pro"]
 
         # Strategy A: New google-genai SDK
         try:
