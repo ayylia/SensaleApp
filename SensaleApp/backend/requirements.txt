@@ -9,4 +9,5 @@ pandas
 numpy
 openpyxl
 google-generativeai
+google-genai
 python-dotenv

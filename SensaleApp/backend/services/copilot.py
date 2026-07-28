@@ -130,32 +130,45 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
     # 2. Try Gemini AI (The Primary Engine)
     api_key = DEFAULT_API_KEY
     if api_key:
+        context = _build_sales_context(db, user_id, SaleRecord)
+        
+        # Formulate robust prompt for both full questions and short/single-word messages
+        if len(message.strip().split()) <= 2:
+            prompt = (
+                context + 
+                f"\nUser Query: {message}\n"
+                f"Note: The user entered a short word/topic '{message}'. "
+                f"Answer conversationally and creatively as Sensale AI Assistant, then relate it back to business growth and their sales data!\n"
+                f"Sensale AI Response:"
+            )
+        else:
+            prompt = context + f"\nUser Question: {message}\nSensale AI Response:"
+
+        candidate_models = ["gemini-2.0-flash", "gemini-1.5-flash", "gemini-1.5-pro", "gemini-pro"]
+
+        # Strategy A: New google-genai SDK
         try:
-            import google.generativeai as genai
-            genai.configure(api_key=api_key)
-            
-            context = _build_sales_context(db, user_id, SaleRecord)
-            
-            # Formulate robust prompt for both full questions and short/single-word messages
-            if len(message.strip().split()) <= 2:
-                prompt = (
-                    context + 
-                    f"\nUser Query: {message}\n"
-                    f"Note: The user entered a short word/topic '{message}'. "
-                    f"Answer conversationally and creatively as Sensale AI Assistant, then relate it back to business growth and their sales data!\n"
-                    f"Sensale AI Response:"
-                )
-            else:
-                prompt = context + f"\nUser Question: {message}\nSensale AI Response:"
-            
-            candidate_models = ["gemini-1.5-flash", "gemini-2.0-flash", "gemini-1.5-pro", "gemini-pro"]
+            from google import genai
+            client = genai.Client(api_key=api_key)
+            for m_name in candidate_models:
+                try:
+                    res = client.models.generate_content(model=m_name, contents=prompt)
+                    if res and hasattr(res, 'text') and res.text:
+                        return res.text.strip()
+                except Exception as g_err:
+                    print(f"google.genai '{m_name}' failed: {g_err}")
+        except Exception as new_sdk_err:
+            print(f"google.genai import/execution skipped: {new_sdk_err}")
+
+        # Strategy B: Legacy google.generativeai SDK
+        try:
+            import google.generativeai as legacy_genai
+            legacy_genai.configure(api_key=api_key)
             
             for m_name in candidate_models:
                 try:
-                    m = genai.GenerativeModel(m_name)
+                    m = legacy_genai.GenerativeModel(m_name)
                     res = m.generate_content(prompt)
-                    
-                    # Safely extract text without triggering SDK safety accessor exception
                     if res:
                         try:
                             if res.text:
@@ -167,7 +180,7 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
                                 if text_out.strip():
                                     return text_out.strip()
                 except Exception as m_err:
-                    print(f"Gemini model '{m_name}' attempt failed: {m_err}")
+                    print(f"legacy genai '{m_name}' attempt failed: {m_err}")
                     continue
         except Exception as e:
             print(f"Gemini API Exception: {e}")
