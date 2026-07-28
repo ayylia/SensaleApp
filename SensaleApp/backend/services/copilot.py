@@ -255,9 +255,19 @@ def answer_query(db: Session, user_id: int, SaleRecord, message: str) -> str:
             "• **Pricing:** 'What price should I charge?'"
         )
 
+    # Short fragments / typos ("gr", "how", "what", etc.)
+    if len(msg) <= 3 or msg in ["how", "what", "why", "where", "who", "gr", "test", "huh"]:
+        return (
+            "👋 Hi there! I'm your Sensale AI Copilot. Ask me questions about your store like:\n\n"
+            "• **'What is my best selling product?'**\n"
+            "• **'What is my total revenue?'**\n"
+            "• **'Which platform sells the most?'**\n"
+            "• **'What should I restock next week?'**"
+        )
+
     # General Out-of-Scope / Strategy Advice Fallback
     return (
-        f"💡 That's an interesting question! Based on your current revenue of **RM{float(rev):,.2f}**, "
+        f"💡 Based on your recorded revenue of **RM{float(rev):,.2f}**, "
         "I recommend checking your **Forecast** and **Price Strategy** tabs to optimize your product margins and inventory levels. "
         "You can also ask me about your best-selling products, revenue, or platform performance! 🚀"
     )
