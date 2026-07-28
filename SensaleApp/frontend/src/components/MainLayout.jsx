@@ -128,7 +128,7 @@ export default function MainLayout() {
     <div style={{ display: 'flex', height: '100dvh', overflow: 'hidden', background: C.bg }}>
 
       {/* ── Sidebar ── */}
-      <aside className="sidebar hidden md:flex flex-col" style={{ width: '280px', flexShrink: 0, zIndex: 100 }}>
+      <aside className="sidebar hidden xl:flex flex-col" style={{ width: '280px', flexShrink: 0, zIndex: 100 }}>
 
         <div style={{ padding: '0 24px', marginBottom: '48px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', cursor: 'pointer' }} onClick={() => navigate('/dashboard')}>
@@ -200,7 +200,7 @@ export default function MainLayout() {
           borderRadius: '50%', pointerEvents: 'none', zIndex: 0
         }} />
 
-        <header className="hidden md:flex" style={{
+        <header className="hidden xl:flex" style={{
           height: '80px', alignItems: 'center', justifyContent: 'space-between',
           padding: '0 32px', position: 'sticky', top: 0, zIndex: 40,
           background: C.white,
@@ -307,7 +307,7 @@ export default function MainLayout() {
           </div>
         </header>
 
-        <header className="md:hidden" style={{
+        <header className="xl:hidden" style={{
           paddingTop: 'env(safe-area-inset-top)', position: 'sticky', top: 0, zIndex: 40,
           background: '#fff',
           borderBottom: `1px solid ${C.border}`
@@ -351,12 +351,12 @@ export default function MainLayout() {
           </div>
         </header>
 
-        <div className="pb-32 md:pb-0">
+        <div className="pb-32 xl:pb-0">
           <Outlet />
         </div>
 
         {/* Mobile Bottom Nav */}
-        <nav className="md:hidden" style={{
+        <nav className="xl:hidden" style={{
           position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 50,
           background: '#fff',
           borderTop: `1px solid ${C.border}`,
