@@ -24,7 +24,7 @@ class SaleRecord(Base):
     sales_volume = Column(Integer)
     unit_price = Column(Float)
     platform_source = Column(String)  # e.g., Shopee, TikTok Shop, Instagram
-    user_id = Column(Integer, ForeignKey("users.id"))
+    user_id = Column(Integer, ForeignKey("users.id"), index=True)
 
     owner = relationship("User", back_populates="sales")
 
