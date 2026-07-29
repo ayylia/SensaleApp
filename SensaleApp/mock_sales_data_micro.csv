@@ -1,0 +1,568 @@
+Date,Product Name,Category,Quantity,Price,Platform
+2026-05-01,Batik Shirt,Apparel,2,54.3,Shopee
+2026-05-01,Silk Hijab,Apparel,1,24.5,TikTok Shop
+2026-05-01,Silk Hijab,Apparel,1,25.18,Shopee
+2026-05-01,Casual Kurung,Apparel,1,74.81,Shopee
+2026-05-02,Crossbody Bag,Accessories,1,58.45,TikTok Shop
+2026-05-02,Slip-on Sandals,Footwear,3,27.78,Shopee
+2026-05-02,Baju Melayu Set,Apparel,2,87.56,Shopee
+2026-05-02,Heeled Wedges,Footwear,1,64.91,TikTok Shop
+2026-05-03,Batik Shirt,Apparel,1,54.95,Shopee
+2026-05-03,Crossbody Bag,Accessories,1,59.93,Instagram
+2026-05-03,Canvas Sneakers,Footwear,1,49.81,Shopee
+2026-05-03,Tote Bag,Accessories,2,25.42,TikTok Shop
+2026-05-04,Crossbody Bag,Accessories,1,58.76,TikTok Shop
+2026-05-04,Tote Bag,Accessories,2,25.44,Shopee
+2026-05-04,Printed Blouse,Apparel,2,34.01,TikTok Shop
+2026-05-04,Canvas Sneakers,Footwear,1,47.72,TikTok Shop
+2026-05-04,Slip-on Sandals,Footwear,1,28.51,TikTok Shop
+2026-05-04,Casual Kurung,Apparel,1,75.38,TikTok Shop
+2026-05-04,Silk Hijab,Apparel,4,24.72,Shopee
+2026-05-04,Tote Bag,Accessories,2,23.68,Instagram
+2026-05-04,Batik Shirt,Apparel,4,55.39,TikTok Shop
+2026-05-05,Tote Bag,Accessories,4,23.96,TikTok Shop
+2026-05-05,Tote Bag,Accessories,1,24.88,TikTok Shop
+2026-05-05,Silk Hijab,Apparel,1,23.56,Shopee
+2026-05-05,Canvas Sneakers,Footwear,1,48.8,Instagram
+2026-05-05,Heeled Wedges,Footwear,1,63.69,Shopee
+2026-05-06,Printed Blouse,Apparel,1,33.53,Shopee
+2026-05-06,Tote Bag,Accessories,1,25.58,TikTok Shop
+2026-05-06,Heeled Wedges,Footwear,4,64.29,Shopee
+2026-05-06,Slip-on Sandals,Footwear,2,28.5,Shopee
+2026-05-06,Canvas Sneakers,Footwear,2,50.41,Shopee
+2026-05-06,Heeled Wedges,Footwear,2,65.54,Shopee
+2026-05-07,Wireless Earbuds Pro,Electronics,2,79.97,Shopee
+2026-05-07,Wireless Earbuds Pro,Electronics,2,78.66,Shopee
+2026-05-07,Batik Shirt,Apparel,3,55.82,Shopee
+2026-05-07,Batik Shirt,Apparel,1,55.1,TikTok Shop
+2026-05-07,Canvas Sneakers,Footwear,1,48.0,TikTok Shop
+2026-05-07,Crossbody Bag,Accessories,1,59.72,TikTok Shop
+2026-05-08,Wireless Earbuds Pro,Electronics,1,80.11,Shopee
+2026-05-08,Wireless Earbuds Pro,Electronics,1,79.87,TikTok Shop
+2026-05-08,Silk Hijab,Apparel,1,26.11,Shopee
+2026-05-08,Tote Bag,Accessories,1,25.0,TikTok Shop
+2026-05-08,Tote Bag,Accessories,1,26.18,Instagram
+2026-05-08,Canvas Sneakers,Footwear,1,49.02,Shopee
+2026-05-08,Casual Kurung,Apparel,1,73.63,Shopee
+2026-05-09,Printed Blouse,Apparel,1,35.77,Shopee
+2026-05-09,Silk Hijab,Apparel,1,24.19,Shopee
+2026-05-09,Crossbody Bag,Accessories,1,59.16,Shopee
+2026-05-09,Baju Melayu Set,Apparel,1,90.21,TikTok Shop
+2026-05-09,Slip-on Sandals,Footwear,1,27.58,Instagram
+2026-05-09,Crossbody Bag,Accessories,1,60.24,TikTok Shop
+2026-05-09,Tote Bag,Accessories,2,23.52,Shopee
+2026-05-09,Crossbody Bag,Accessories,4,58.53,TikTok Shop
+2026-05-10,Printed Blouse,Apparel,1,36.08,Instagram
+2026-05-10,Canvas Sneakers,Footwear,3,48.45,Instagram
+2026-05-10,Casual Kurung,Apparel,1,75.76,TikTok Shop
+2026-05-10,Baju Melayu Set,Apparel,4,87.69,TikTok Shop
+2026-05-10,Heeled Wedges,Footwear,1,65.99,TikTok Shop
+2026-05-10,Baju Melayu Set,Apparel,1,87.71,TikTok Shop
+2026-05-10,Batik Shirt,Apparel,3,55.01,Shopee
+2026-05-10,Crossbody Bag,Accessories,1,58.64,Shopee
+2026-05-11,Heeled Wedges,Footwear,1,65.22,Shopee
+2026-05-11,Canvas Sneakers,Footwear,2,48.3,Shopee
+2026-05-11,Slip-on Sandals,Footwear,1,28.25,TikTok Shop
+2026-05-11,Slip-on Sandals,Footwear,1,30.27,TikTok Shop
+2026-05-11,Canvas Sneakers,Footwear,1,47.56,Shopee
+2026-05-11,Wireless Earbuds Pro,Electronics,2,78.93,TikTok Shop
+2026-05-11,Silk Hijab,Apparel,4,23.92,TikTok Shop
+2026-05-11,Canvas Sneakers,Footwear,1,47.6,Shopee
+2026-05-12,Crossbody Bag,Accessories,2,60.2,Shopee
+2026-05-12,Silk Hijab,Apparel,2,24.18,Shopee
+2026-05-12,Printed Blouse,Apparel,1,36.49,Shopee
+2026-05-12,Canvas Sneakers,Footwear,1,47.54,TikTok Shop
+2026-05-12,Wireless Earbuds Pro,Electronics,1,78.31,Shopee
+2026-05-12,Baju Melayu Set,Apparel,3,90.02,Instagram
+2026-05-12,Batik Shirt,Apparel,3,54.9,TikTok Shop
+2026-05-12,Batik Shirt,Apparel,1,54.83,TikTok Shop
+2026-05-13,Tote Bag,Accessories,2,25.06,Shopee
+2026-05-13,Printed Blouse,Apparel,3,34.72,Instagram
+2026-05-13,Slip-on Sandals,Footwear,1,28.8,Shopee
+2026-05-13,Wireless Earbuds Pro,Electronics,1,77.96,TikTok Shop
+2026-05-13,Baju Melayu Set,Apparel,3,90.43,Shopee
+2026-05-13,Silk Hijab,Apparel,3,23.72,Shopee
+2026-05-13,Silk Hijab,Apparel,1,24.47,Shopee
+2026-05-13,Silk Hijab,Apparel,3,24.24,Shopee
+2026-05-14,Batik Shirt,Apparel,1,54.35,Shopee
+2026-05-14,Wireless Earbuds Pro,Electronics,1,77.58,Shopee
+2026-05-14,Canvas Sneakers,Footwear,1,48.74,Shopee
+2026-05-14,Tote Bag,Accessories,3,24.67,Instagram
+2026-05-14,Casual Kurung,Apparel,1,76.21,TikTok Shop
+2026-05-14,Silk Hijab,Apparel,1,25.69,Shopee
+2026-05-14,Printed Blouse,Apparel,1,36.28,Shopee
+2026-05-15,Tote Bag,Accessories,1,25.06,TikTok Shop
+2026-05-15,Batik Shirt,Apparel,1,56.31,Shopee
+2026-05-15,Printed Blouse,Apparel,2,35.76,TikTok Shop
+2026-05-15,Crossbody Bag,Accessories,1,57.75,Instagram
+2026-05-15,Wireless Earbuds Pro,Electronics,4,78.04,Shopee
+2026-05-15,Baju Melayu Set,Apparel,1,90.09,TikTok Shop
+2026-05-16,Printed Blouse,Apparel,1,33.94,Shopee
+2026-05-16,Slip-on Sandals,Footwear,3,29.48,TikTok Shop
+2026-05-16,Silk Hijab,Apparel,1,24.88,Shopee
+2026-05-16,Printed Blouse,Apparel,2,34.58,Shopee
+2026-05-16,Casual Kurung,Apparel,1,74.79,Shopee
+2026-05-17,Baju Melayu Set,Apparel,2,88.38,Shopee
+2026-05-17,Wireless Earbuds Pro,Electronics,1,78.19,TikTok Shop
+2026-05-17,Silk Hijab,Apparel,1,23.83,Shopee
+2026-05-17,Casual Kurung,Apparel,1,75.17,Shopee
+2026-05-17,Silk Hijab,Apparel,3,25.42,TikTok Shop
+2026-05-17,Tote Bag,Accessories,3,26.43,Shopee
+2026-05-17,Tote Bag,Accessories,1,23.89,Shopee
+2026-05-17,Heeled Wedges,Footwear,2,64.55,Shopee
+2026-05-17,Silk Hijab,Apparel,1,23.51,Shopee
+2026-05-18,Printed Blouse,Apparel,2,35.33,TikTok Shop
+2026-05-18,Slip-on Sandals,Footwear,2,30.37,Shopee
+2026-05-18,Tote Bag,Accessories,1,25.54,Shopee
+2026-05-18,Casual Kurung,Apparel,2,74.78,Shopee
+2026-05-18,Slip-on Sandals,Footwear,2,29.16,Shopee
+2026-05-18,Tote Bag,Accessories,1,24.28,Shopee
+2026-05-19,Wireless Earbuds Pro,Electronics,1,78.08,Instagram
+2026-05-19,Baju Melayu Set,Apparel,1,89.64,Shopee
+2026-05-19,Printed Blouse,Apparel,1,36.24,Shopee
+2026-05-19,Canvas Sneakers,Footwear,3,48.58,Shopee
+2026-05-20,Heeled Wedges,Footwear,2,65.06,Shopee
+2026-05-20,Tote Bag,Accessories,2,23.86,Shopee
+2026-05-20,Canvas Sneakers,Footwear,2,49.41,Shopee
+2026-05-20,Wireless Earbuds Pro,Electronics,1,78.2,Shopee
+2026-05-20,Printed Blouse,Apparel,2,36.3,Shopee
+2026-05-20,Slip-on Sandals,Footwear,2,30.15,TikTok Shop
+2026-05-21,Wireless Earbuds Pro,Electronics,2,77.9,Shopee
+2026-05-21,Silk Hijab,Apparel,1,26.25,TikTok Shop
+2026-05-21,Heeled Wedges,Footwear,2,63.75,Shopee
+2026-05-21,Tote Bag,Accessories,1,25.83,Shopee
+2026-05-21,Heeled Wedges,Footwear,1,63.57,Shopee
+2026-05-21,Crossbody Bag,Accessories,1,57.66,TikTok Shop
+2026-05-22,Tote Bag,Accessories,1,24.43,Instagram
+2026-05-22,Crossbody Bag,Accessories,2,58.51,TikTok Shop
+2026-05-22,Silk Hijab,Apparel,1,24.35,Instagram
+2026-05-22,Casual Kurung,Apparel,1,73.63,TikTok Shop
+2026-05-22,Printed Blouse,Apparel,1,33.64,Shopee
+2026-05-22,Casual Kurung,Apparel,1,76.4,Shopee
+2026-05-22,Heeled Wedges,Footwear,2,66.09,TikTok Shop
+2026-05-22,Tote Bag,Accessories,1,25.99,Shopee
+2026-05-22,Casual Kurung,Apparel,1,76.32,Shopee
+2026-05-23,Silk Hijab,Apparel,2,23.97,Shopee
+2026-05-23,Wireless Earbuds Pro,Electronics,1,79.64,TikTok Shop
+2026-05-23,Heeled Wedges,Footwear,3,65.35,Instagram
+2026-05-23,Canvas Sneakers,Footwear,1,49.47,Instagram
+2026-05-23,Heeled Wedges,Footwear,2,63.76,Instagram
+2026-05-23,Casual Kurung,Apparel,2,75.43,Shopee
+2026-05-24,Wireless Earbuds Pro,Electronics,1,79.03,TikTok Shop
+2026-05-24,Batik Shirt,Apparel,1,54.05,Shopee
+2026-05-24,Tote Bag,Accessories,3,23.77,Instagram
+2026-05-24,Silk Hijab,Apparel,2,23.93,TikTok Shop
+2026-05-24,Crossbody Bag,Accessories,2,58.86,Instagram
+2026-05-24,Wireless Earbuds Pro,Electronics,2,79.98,Shopee
+2026-05-24,Slip-on Sandals,Footwear,1,29.92,Shopee
+2026-05-24,Slip-on Sandals,Footwear,2,28.35,Shopee
+2026-05-24,Tote Bag,Accessories,4,25.46,TikTok Shop
+2026-05-25,Casual Kurung,Apparel,1,73.66,Shopee
+2026-05-25,Printed Blouse,Apparel,2,35.76,TikTok Shop
+2026-05-25,Wireless Earbuds Pro,Electronics,3,80.43,Shopee
+2026-05-25,Crossbody Bag,Accessories,1,58.65,Shopee
+2026-05-25,Baju Melayu Set,Apparel,2,87.8,TikTok Shop
+2026-05-25,Slip-on Sandals,Footwear,2,30.14,TikTok Shop
+2026-05-26,Slip-on Sandals,Footwear,1,29.31,Shopee
+2026-05-26,Heeled Wedges,Footwear,4,64.51,Instagram
+2026-05-26,Slip-on Sandals,Footwear,1,29.69,Shopee
+2026-05-26,Silk Hijab,Apparel,1,25.82,Instagram
+2026-05-26,Canvas Sneakers,Footwear,1,49.92,Shopee
+2026-05-26,Baju Melayu Set,Apparel,2,89.73,Instagram
+2026-05-26,Baju Melayu Set,Apparel,3,89.03,TikTok Shop
+2026-05-26,Wireless Earbuds Pro,Electronics,2,78.96,Shopee
+2026-05-27,Silk Hijab,Apparel,1,24.55,TikTok Shop
+2026-05-27,Wireless Earbuds Pro,Electronics,2,78.17,TikTok Shop
+2026-05-27,Heeled Wedges,Footwear,2,64.92,Instagram
+2026-05-27,Canvas Sneakers,Footwear,2,50.09,Shopee
+2026-05-27,Printed Blouse,Apparel,1,33.54,Shopee
+2026-05-27,Silk Hijab,Apparel,4,24.6,Instagram
+2026-05-27,Casual Kurung,Apparel,1,75.52,Instagram
+2026-05-27,Tote Bag,Accessories,2,25.97,TikTok Shop
+2026-05-27,Canvas Sneakers,Footwear,1,48.05,Instagram
+2026-05-28,Slip-on Sandals,Footwear,2,30.01,Shopee
+2026-05-28,Heeled Wedges,Footwear,2,64.54,Instagram
+2026-05-28,Wireless Earbuds Pro,Electronics,1,80.31,Shopee
+2026-05-28,Tote Bag,Accessories,2,24.54,Shopee
+2026-05-28,Silk Hijab,Apparel,1,26.43,Shopee
+2026-05-28,Silk Hijab,Apparel,1,24.76,TikTok Shop
+2026-05-28,Slip-on Sandals,Footwear,2,28.05,Shopee
+2026-05-28,Casual Kurung,Apparel,2,75.71,Shopee
+2026-05-28,Printed Blouse,Apparel,1,35.03,TikTok Shop
+2026-05-29,Printed Blouse,Apparel,1,35.58,Shopee
+2026-05-29,Canvas Sneakers,Footwear,1,50.1,Shopee
+2026-05-29,Heeled Wedges,Footwear,2,64.85,Instagram
+2026-05-29,Heeled Wedges,Footwear,2,64.74,TikTok Shop
+2026-05-29,Printed Blouse,Apparel,3,34.68,Shopee
+2026-05-29,Canvas Sneakers,Footwear,1,48.5,Shopee
+2026-05-29,Baju Melayu Set,Apparel,1,88.68,Shopee
+2026-05-30,Silk Hijab,Apparel,2,24.45,Shopee
+2026-05-30,Batik Shirt,Apparel,1,54.92,Shopee
+2026-05-30,Casual Kurung,Apparel,2,73.6,TikTok Shop
+2026-05-30,Slip-on Sandals,Footwear,1,28.22,Shopee
+2026-05-30,Slip-on Sandals,Footwear,1,28.44,TikTok Shop
+2026-05-30,Baju Melayu Set,Apparel,1,89.87,Shopee
+2026-05-31,Wireless Earbuds Pro,Electronics,1,80.23,TikTok Shop
+2026-05-31,Heeled Wedges,Footwear,3,63.74,Instagram
+2026-05-31,Heeled Wedges,Footwear,4,66.22,TikTok Shop
+2026-05-31,Crossbody Bag,Accessories,1,59.19,Shopee
+2026-05-31,Tote Bag,Accessories,1,23.67,Shopee
+2026-05-31,Heeled Wedges,Footwear,1,65.33,TikTok Shop
+2026-05-31,Crossbody Bag,Accessories,2,58.02,Shopee
+2026-06-01,Casual Kurung,Apparel,1,75.71,Instagram
+2026-06-01,Printed Blouse,Apparel,1,33.69,TikTok Shop
+2026-06-01,Slip-on Sandals,Footwear,2,27.9,Instagram
+2026-06-01,Baju Melayu Set,Apparel,2,87.89,Shopee
+2026-06-01,Batik Shirt,Apparel,1,54.86,TikTok Shop
+2026-06-01,Crossbody Bag,Accessories,2,58.09,Shopee
+2026-06-01,Casual Kurung,Apparel,1,75.75,TikTok Shop
+2026-06-01,Batik Shirt,Apparel,2,53.58,Shopee
+2026-06-02,Canvas Sneakers,Footwear,2,47.98,TikTok Shop
+2026-06-02,Silk Hijab,Apparel,1,24.54,Shopee
+2026-06-02,Printed Blouse,Apparel,3,34.81,Shopee
+2026-06-02,Printed Blouse,Apparel,1,35.32,TikTok Shop
+2026-06-02,Casual Kurung,Apparel,1,76.17,Instagram
+2026-06-03,Wireless Earbuds Pro,Electronics,1,79.79,Shopee
+2026-06-03,Crossbody Bag,Accessories,2,60.37,Shopee
+2026-06-03,Crossbody Bag,Accessories,1,58.8,TikTok Shop
+2026-06-03,Crossbody Bag,Accessories,3,57.93,Shopee
+2026-06-03,Casual Kurung,Apparel,2,75.87,Shopee
+2026-06-04,Baju Melayu Set,Apparel,1,90.33,Instagram
+2026-06-04,Casual Kurung,Apparel,1,74.2,Shopee
+2026-06-04,Printed Blouse,Apparel,1,34.03,Shopee
+2026-06-04,Silk Hijab,Apparel,2,25.38,TikTok Shop
+2026-06-04,Wireless Earbuds Pro,Electronics,1,79.41,TikTok Shop
+2026-06-04,Casual Kurung,Apparel,1,75.65,TikTok Shop
+2026-06-04,Printed Blouse,Apparel,1,34.39,Shopee
+2026-06-04,Casual Kurung,Apparel,2,76.45,Shopee
+2026-06-05,Wireless Earbuds Pro,Electronics,3,78.73,Instagram
+2026-06-05,Batik Shirt,Apparel,1,54.89,TikTok Shop
+2026-06-05,Tote Bag,Accessories,1,24.43,Shopee
+2026-06-05,Slip-on Sandals,Footwear,1,28.3,Instagram
+2026-06-06,Slip-on Sandals,Footwear,2,30.05,Instagram
+2026-06-06,Printed Blouse,Apparel,1,36.47,Instagram
+2026-06-06,Canvas Sneakers,Footwear,1,48.58,Shopee
+2026-06-06,Batik Shirt,Apparel,1,53.78,Shopee
+2026-06-06,Silk Hijab,Apparel,2,24.62,Instagram
+2026-06-07,Slip-on Sandals,Footwear,1,28.22,TikTok Shop
+2026-06-07,Wireless Earbuds Pro,Electronics,1,79.66,Instagram
+2026-06-07,Baju Melayu Set,Apparel,1,89.71,Instagram
+2026-06-07,Heeled Wedges,Footwear,1,64.28,Shopee
+2026-06-07,Crossbody Bag,Accessories,2,60.42,Shopee
+2026-06-07,Heeled Wedges,Footwear,2,65.56,TikTok Shop
+2026-06-07,Silk Hijab,Apparel,3,26.45,Instagram
+2026-06-08,Wireless Earbuds Pro,Electronics,1,80.39,TikTok Shop
+2026-06-08,Canvas Sneakers,Footwear,2,49.33,TikTok Shop
+2026-06-08,Silk Hijab,Apparel,1,24.86,Instagram
+2026-06-08,Wireless Earbuds Pro,Electronics,1,78.28,Shopee
+2026-06-08,Batik Shirt,Apparel,1,55.51,Shopee
+2026-06-09,Baju Melayu Set,Apparel,1,88.02,Shopee
+2026-06-09,Batik Shirt,Apparel,1,53.67,TikTok Shop
+2026-06-09,Crossbody Bag,Accessories,1,59.84,TikTok Shop
+2026-06-09,Wireless Earbuds Pro,Electronics,2,77.73,Shopee
+2026-06-09,Slip-on Sandals,Footwear,1,27.78,Instagram
+2026-06-09,Canvas Sneakers,Footwear,4,48.33,Shopee
+2026-06-09,Slip-on Sandals,Footwear,2,29.36,TikTok Shop
+2026-06-09,Silk Hijab,Apparel,1,25.81,Shopee
+2026-06-09,Casual Kurung,Apparel,1,73.62,Shopee
+2026-06-10,Crossbody Bag,Accessories,4,57.89,Shopee
+2026-06-10,Casual Kurung,Apparel,1,76.38,Shopee
+2026-06-10,Printed Blouse,Apparel,1,34.94,TikTok Shop
+2026-06-10,Wireless Earbuds Pro,Electronics,1,80.3,TikTok Shop
+2026-06-10,Canvas Sneakers,Footwear,2,49.45,TikTok Shop
+2026-06-10,Tote Bag,Accessories,1,24.08,TikTok Shop
+2026-06-10,Wireless Earbuds Pro,Electronics,1,78.08,Instagram
+2026-06-10,Batik Shirt,Apparel,3,54.36,Shopee
+2026-06-11,Heeled Wedges,Footwear,1,63.96,Shopee
+2026-06-11,Canvas Sneakers,Footwear,1,48.59,Instagram
+2026-06-11,Crossbody Bag,Accessories,3,59.64,TikTok Shop
+2026-06-11,Silk Hijab,Apparel,2,26.04,Shopee
+2026-06-11,Silk Hijab,Apparel,2,26.37,Instagram
+2026-06-11,Canvas Sneakers,Footwear,1,49.41,Instagram
+2026-06-11,Batik Shirt,Apparel,1,54.83,Instagram
+2026-06-11,Wireless Earbuds Pro,Electronics,1,78.49,Shopee
+2026-06-12,Crossbody Bag,Accessories,2,58.26,Instagram
+2026-06-12,Wireless Earbuds Pro,Electronics,1,79.25,TikTok Shop
+2026-06-12,Baju Melayu Set,Apparel,1,87.69,TikTok Shop
+2026-06-12,Baju Melayu Set,Apparel,2,89.72,Shopee
+2026-06-12,Wireless Earbuds Pro,Electronics,1,78.98,Shopee
+2026-06-12,Casual Kurung,Apparel,1,74.13,Shopee
+2026-06-12,Casual Kurung,Apparel,3,73.88,Shopee
+2026-06-13,Heeled Wedges,Footwear,3,65.04,Shopee
+2026-06-13,Heeled Wedges,Footwear,1,63.52,Instagram
+2026-06-13,Wireless Earbuds Pro,Electronics,4,79.32,TikTok Shop
+2026-06-13,Casual Kurung,Apparel,1,73.66,Instagram
+2026-06-13,Slip-on Sandals,Footwear,1,29.52,Shopee
+2026-06-14,Tote Bag,Accessories,1,24.43,Shopee
+2026-06-14,Heeled Wedges,Footwear,1,65.23,Instagram
+2026-06-14,Baju Melayu Set,Apparel,1,89.11,Shopee
+2026-06-14,Crossbody Bag,Accessories,2,58.06,TikTok Shop
+2026-06-14,Heeled Wedges,Footwear,1,64.87,Instagram
+2026-06-14,Printed Blouse,Apparel,1,35.37,Shopee
+2026-06-14,Silk Hijab,Apparel,1,25.65,TikTok Shop
+2026-06-15,Baju Melayu Set,Apparel,2,90.14,Shopee
+2026-06-15,Casual Kurung,Apparel,2,74.83,Shopee
+2026-06-15,Silk Hijab,Apparel,1,24.93,Shopee
+2026-06-15,Tote Bag,Accessories,2,25.71,Shopee
+2026-06-16,Slip-on Sandals,Footwear,4,29.37,TikTok Shop
+2026-06-16,Printed Blouse,Apparel,1,33.69,TikTok Shop
+2026-06-16,Canvas Sneakers,Footwear,3,47.93,Instagram
+2026-06-16,Slip-on Sandals,Footwear,1,29.96,TikTok Shop
+2026-06-16,Baju Melayu Set,Apparel,1,87.99,Shopee
+2026-06-16,Batik Shirt,Apparel,1,54.23,TikTok Shop
+2026-06-16,Silk Hijab,Apparel,1,26.25,Instagram
+2026-06-17,Casual Kurung,Apparel,3,73.54,TikTok Shop
+2026-06-17,Printed Blouse,Apparel,2,34.34,Instagram
+2026-06-17,Wireless Earbuds Pro,Electronics,1,79.88,Instagram
+2026-06-17,Heeled Wedges,Footwear,1,64.5,Shopee
+2026-06-18,Crossbody Bag,Accessories,1,58.96,Shopee
+2026-06-18,Printed Blouse,Apparel,2,33.8,Shopee
+2026-06-18,Slip-on Sandals,Footwear,1,30.02,TikTok Shop
+2026-06-18,Tote Bag,Accessories,2,26.25,Instagram
+2026-06-18,Wireless Earbuds Pro,Electronics,4,79.68,Shopee
+2026-06-18,Baju Melayu Set,Apparel,4,90.07,Shopee
+2026-06-18,Crossbody Bag,Accessories,2,59.24,Shopee
+2026-06-19,Batik Shirt,Apparel,1,56.32,Shopee
+2026-06-19,Slip-on Sandals,Footwear,3,28.32,Shopee
+2026-06-19,Tote Bag,Accessories,1,25.5,Shopee
+2026-06-19,Wireless Earbuds Pro,Electronics,1,77.88,TikTok Shop
+2026-06-19,Wireless Earbuds Pro,Electronics,2,80.47,Shopee
+2026-06-19,Tote Bag,Accessories,2,25.1,TikTok Shop
+2026-06-19,Tote Bag,Accessories,3,25.4,Shopee
+2026-06-19,Crossbody Bag,Accessories,1,59.83,Shopee
+2026-06-19,Wireless Earbuds Pro,Electronics,1,77.78,TikTok Shop
+2026-06-20,Slip-on Sandals,Footwear,1,28.67,TikTok Shop
+2026-06-20,Canvas Sneakers,Footwear,2,49.1,TikTok Shop
+2026-06-20,Batik Shirt,Apparel,3,55.27,Instagram
+2026-06-20,Silk Hijab,Apparel,1,24.82,Instagram
+2026-06-20,Baju Melayu Set,Apparel,1,88.79,Shopee
+2026-06-21,Slip-on Sandals,Footwear,4,30.08,Instagram
+2026-06-21,Batik Shirt,Apparel,2,53.76,Shopee
+2026-06-21,Crossbody Bag,Accessories,3,58.51,TikTok Shop
+2026-06-21,Canvas Sneakers,Footwear,1,47.74,Instagram
+2026-06-21,Crossbody Bag,Accessories,1,59.07,Instagram
+2026-06-21,Canvas Sneakers,Footwear,2,49.39,TikTok Shop
+2026-06-21,Batik Shirt,Apparel,1,55.51,Shopee
+2026-06-21,Casual Kurung,Apparel,1,74.15,TikTok Shop
+2026-06-21,Wireless Earbuds Pro,Electronics,1,79.55,Shopee
+2026-06-22,Canvas Sneakers,Footwear,1,48.71,Shopee
+2026-06-22,Casual Kurung,Apparel,4,75.94,TikTok Shop
+2026-06-22,Baju Melayu Set,Apparel,1,89.35,Shopee
+2026-06-22,Casual Kurung,Apparel,1,75.94,TikTok Shop
+2026-06-22,Batik Shirt,Apparel,2,55.84,Shopee
+2026-06-23,Casual Kurung,Apparel,1,76.07,TikTok Shop
+2026-06-23,Canvas Sneakers,Footwear,2,47.93,Shopee
+2026-06-23,Heeled Wedges,Footwear,2,66.15,Instagram
+2026-06-23,Printed Blouse,Apparel,2,35.99,Shopee
+2026-06-23,Silk Hijab,Apparel,1,23.94,TikTok Shop
+2026-06-23,Tote Bag,Accessories,3,26.01,TikTok Shop
+2026-06-23,Silk Hijab,Apparel,3,24.23,Shopee
+2026-06-23,Slip-on Sandals,Footwear,2,30.41,Instagram
+2026-06-23,Tote Bag,Accessories,1,25.58,TikTok Shop
+2026-06-24,Printed Blouse,Apparel,2,36.43,Shopee
+2026-06-24,Crossbody Bag,Accessories,1,59.4,Shopee
+2026-06-24,Crossbody Bag,Accessories,1,59.01,Instagram
+2026-06-24,Silk Hijab,Apparel,1,24.1,TikTok Shop
+2026-06-24,Batik Shirt,Apparel,1,54.71,Shopee
+2026-06-24,Baju Melayu Set,Apparel,2,89.85,Shopee
+2026-06-24,Tote Bag,Accessories,2,26.01,TikTok Shop
+2026-06-25,Casual Kurung,Apparel,1,74.48,TikTok Shop
+2026-06-25,Printed Blouse,Apparel,1,35.67,Shopee
+2026-06-25,Casual Kurung,Apparel,1,76.39,Shopee
+2026-06-25,Heeled Wedges,Footwear,2,65.77,Shopee
+2026-06-26,Slip-on Sandals,Footwear,1,30.06,TikTok Shop
+2026-06-26,Printed Blouse,Apparel,1,34.63,TikTok Shop
+2026-06-26,Printed Blouse,Apparel,1,33.63,Instagram
+2026-06-26,Tote Bag,Accessories,3,25.83,Instagram
+2026-06-26,Casual Kurung,Apparel,1,74.36,Shopee
+2026-06-26,Wireless Earbuds Pro,Electronics,2,79.25,Instagram
+2026-06-26,Silk Hijab,Apparel,1,24.81,Shopee
+2026-06-26,Printed Blouse,Apparel,1,34.68,Shopee
+2026-06-27,Crossbody Bag,Accessories,1,60.37,Shopee
+2026-06-27,Slip-on Sandals,Footwear,1,29.72,TikTok Shop
+2026-06-27,Baju Melayu Set,Apparel,3,89.52,Shopee
+2026-06-27,Canvas Sneakers,Footwear,3,47.66,Shopee
+2026-06-27,Silk Hijab,Apparel,4,25.32,TikTok Shop
+2026-06-27,Printed Blouse,Apparel,1,34.6,Shopee
+2026-06-27,Batik Shirt,Apparel,1,55.11,TikTok Shop
+2026-06-27,Tote Bag,Accessories,4,25.15,TikTok Shop
+2026-06-27,Batik Shirt,Apparel,1,53.59,Shopee
+2026-06-28,Tote Bag,Accessories,1,23.76,Shopee
+2026-06-28,Batik Shirt,Apparel,1,53.63,Shopee
+2026-06-28,Tote Bag,Accessories,2,25.06,Instagram
+2026-06-28,Baju Melayu Set,Apparel,1,88.51,Shopee
+2026-06-29,Batik Shirt,Apparel,1,54.07,TikTok Shop
+2026-06-29,Casual Kurung,Apparel,1,74.73,TikTok Shop
+2026-06-29,Silk Hijab,Apparel,3,24.75,Shopee
+2026-06-29,Slip-on Sandals,Footwear,4,28.35,Shopee
+2026-06-29,Silk Hijab,Apparel,1,26.18,Shopee
+2026-06-29,Canvas Sneakers,Footwear,1,48.47,Instagram
+2026-06-29,Tote Bag,Accessories,3,26.41,Shopee
+2026-06-30,Printed Blouse,Apparel,2,36.21,Instagram
+2026-06-30,Baju Melayu Set,Apparel,1,89.04,Shopee
+2026-06-30,Canvas Sneakers,Footwear,2,48.25,Instagram
+2026-06-30,Batik Shirt,Apparel,1,56.08,Instagram
+2026-07-01,Casual Kurung,Apparel,2,75.79,Shopee
+2026-07-01,Canvas Sneakers,Footwear,1,48.57,Instagram
+2026-07-01,Slip-on Sandals,Footwear,3,29.26,TikTok Shop
+2026-07-01,Wireless Earbuds Pro,Electronics,3,79.16,Shopee
+2026-07-01,Tote Bag,Accessories,4,26.24,Shopee
+2026-07-01,Printed Blouse,Apparel,1,33.87,Shopee
+2026-07-01,Slip-on Sandals,Footwear,1,29.52,Shopee
+2026-07-01,Canvas Sneakers,Footwear,1,49.88,Instagram
+2026-07-02,Canvas Sneakers,Footwear,1,50.39,Shopee
+2026-07-02,Wireless Earbuds Pro,Electronics,1,79.62,Instagram
+2026-07-02,Baju Melayu Set,Apparel,3,88.22,TikTok Shop
+2026-07-02,Casual Kurung,Apparel,1,73.64,TikTok Shop
+2026-07-02,Silk Hijab,Apparel,4,25.84,TikTok Shop
+2026-07-03,Canvas Sneakers,Footwear,1,49.96,Shopee
+2026-07-03,Casual Kurung,Apparel,2,74.53,TikTok Shop
+2026-07-03,Canvas Sneakers,Footwear,1,50.28,Shopee
+2026-07-03,Tote Bag,Accessories,2,25.33,Shopee
+2026-07-03,Printed Blouse,Apparel,4,33.7,Instagram
+2026-07-04,Crossbody Bag,Accessories,1,59.53,Shopee
+2026-07-04,Slip-on Sandals,Footwear,1,27.66,TikTok Shop
+2026-07-04,Casual Kurung,Apparel,2,73.55,Shopee
+2026-07-04,Heeled Wedges,Footwear,1,65.77,Shopee
+2026-07-04,Printed Blouse,Apparel,2,34.7,Shopee
+2026-07-04,Tote Bag,Accessories,1,26.45,TikTok Shop
+2026-07-04,Baju Melayu Set,Apparel,1,90.39,TikTok Shop
+2026-07-04,Printed Blouse,Apparel,3,34.55,TikTok Shop
+2026-07-05,Heeled Wedges,Footwear,1,64.56,Shopee
+2026-07-05,Wireless Earbuds Pro,Electronics,2,79.98,Shopee
+2026-07-05,Heeled Wedges,Footwear,1,65.06,Instagram
+2026-07-05,Tote Bag,Accessories,1,24.97,Shopee
+2026-07-05,Crossbody Bag,Accessories,1,60.2,Shopee
+2026-07-06,Heeled Wedges,Footwear,2,64.63,TikTok Shop
+2026-07-06,Slip-on Sandals,Footwear,1,29.8,TikTok Shop
+2026-07-06,Canvas Sneakers,Footwear,1,48.18,TikTok Shop
+2026-07-06,Slip-on Sandals,Footwear,2,27.74,Shopee
+2026-07-06,Canvas Sneakers,Footwear,1,47.73,Shopee
+2026-07-07,Tote Bag,Accessories,1,26.12,Shopee
+2026-07-07,Heeled Wedges,Footwear,1,65.77,Instagram
+2026-07-07,Slip-on Sandals,Footwear,1,28.86,Shopee
+2026-07-07,Batik Shirt,Apparel,1,53.91,Shopee
+2026-07-07,Baju Melayu Set,Apparel,2,87.9,Shopee
+2026-07-08,Baju Melayu Set,Apparel,1,90.41,TikTok Shop
+2026-07-08,Canvas Sneakers,Footwear,3,49.33,TikTok Shop
+2026-07-08,Heeled Wedges,Footwear,1,64.14,TikTok Shop
+2026-07-08,Printed Blouse,Apparel,2,33.92,Shopee
+2026-07-09,Batik Shirt,Apparel,2,56.49,TikTok Shop
+2026-07-09,Silk Hijab,Apparel,1,25.36,Shopee
+2026-07-09,Silk Hijab,Apparel,1,25.45,Shopee
+2026-07-09,Wireless Earbuds Pro,Electronics,1,79.93,TikTok Shop
+2026-07-09,Heeled Wedges,Footwear,1,63.54,Shopee
+2026-07-09,Wireless Earbuds Pro,Electronics,1,78.53,TikTok Shop
+2026-07-09,Tote Bag,Accessories,2,24.57,Shopee
+2026-07-10,Heeled Wedges,Footwear,1,65.05,TikTok Shop
+2026-07-10,Silk Hijab,Apparel,1,24.1,TikTok Shop
+2026-07-10,Batik Shirt,Apparel,1,54.53,TikTok Shop
+2026-07-10,Baju Melayu Set,Apparel,1,88.52,Shopee
+2026-07-10,Casual Kurung,Apparel,1,74.26,TikTok Shop
+2026-07-10,Tote Bag,Accessories,2,25.05,TikTok Shop
+2026-07-11,Batik Shirt,Apparel,2,55.66,Shopee
+2026-07-11,Casual Kurung,Apparel,2,76.39,Shopee
+2026-07-11,Wireless Earbuds Pro,Electronics,1,79.94,Shopee
+2026-07-11,Silk Hijab,Apparel,2,23.7,Shopee
+2026-07-11,Baju Melayu Set,Apparel,1,88.86,Shopee
+2026-07-11,Printed Blouse,Apparel,1,36.16,Instagram
+2026-07-12,Silk Hijab,Apparel,4,25.91,TikTok Shop
+2026-07-12,Baju Melayu Set,Apparel,1,89.55,Instagram
+2026-07-12,Casual Kurung,Apparel,1,74.06,TikTok Shop
+2026-07-12,Silk Hijab,Apparel,1,24.61,Shopee
+2026-07-13,Printed Blouse,Apparel,1,34.64,Instagram
+2026-07-13,Heeled Wedges,Footwear,1,63.61,Shopee
+2026-07-13,Silk Hijab,Apparel,3,26.23,Instagram
+2026-07-13,Crossbody Bag,Accessories,3,58.95,TikTok Shop
+2026-07-13,Silk Hijab,Apparel,2,25.89,TikTok Shop
+2026-07-14,Wireless Earbuds Pro,Electronics,2,78.45,TikTok Shop
+2026-07-14,Casual Kurung,Apparel,1,74.6,TikTok Shop
+2026-07-14,Baju Melayu Set,Apparel,1,87.56,Shopee
+2026-07-14,Baju Melayu Set,Apparel,1,89.74,TikTok Shop
+2026-07-14,Slip-on Sandals,Footwear,1,30.27,Instagram
+2026-07-14,Baju Melayu Set,Apparel,2,88.68,TikTok Shop
+2026-07-15,Canvas Sneakers,Footwear,2,50.08,Instagram
+2026-07-15,Tote Bag,Accessories,2,24.62,Shopee
+2026-07-15,Crossbody Bag,Accessories,3,60.18,Shopee
+2026-07-15,Tote Bag,Accessories,1,26.1,Shopee
+2026-07-15,Wireless Earbuds Pro,Electronics,2,79.76,TikTok Shop
+2026-07-15,Baju Melayu Set,Apparel,2,89.71,TikTok Shop
+2026-07-15,Baju Melayu Set,Apparel,2,89.94,Instagram
+2026-07-15,Crossbody Bag,Accessories,2,60.49,TikTok Shop
+2026-07-15,Printed Blouse,Apparel,1,35.22,Shopee
+2026-07-16,Crossbody Bag,Accessories,2,58.34,Shopee
+2026-07-16,Canvas Sneakers,Footwear,1,50.45,Shopee
+2026-07-16,Tote Bag,Accessories,1,24.73,Shopee
+2026-07-16,Silk Hijab,Apparel,2,25.33,Shopee
+2026-07-16,Wireless Earbuds Pro,Electronics,1,80.4,Shopee
+2026-07-16,Batik Shirt,Apparel,2,55.22,Shopee
+2026-07-17,Slip-on Sandals,Footwear,2,29.84,Shopee
+2026-07-17,Silk Hijab,Apparel,2,24.97,TikTok Shop
+2026-07-17,Printed Blouse,Apparel,1,34.15,TikTok Shop
+2026-07-17,Canvas Sneakers,Footwear,1,49.42,Shopee
+2026-07-17,Batik Shirt,Apparel,2,54.73,TikTok Shop
+2026-07-17,Casual Kurung,Apparel,2,73.8,Shopee
+2026-07-18,Batik Shirt,Apparel,2,56.42,Shopee
+2026-07-18,Batik Shirt,Apparel,1,53.9,Shopee
+2026-07-18,Printed Blouse,Apparel,1,33.67,Shopee
+2026-07-18,Heeled Wedges,Footwear,1,65.43,Shopee
+2026-07-18,Casual Kurung,Apparel,1,73.72,TikTok Shop
+2026-07-18,Crossbody Bag,Accessories,1,57.71,Shopee
+2026-07-18,Casual Kurung,Apparel,2,74.96,TikTok Shop
+2026-07-18,Crossbody Bag,Accessories,3,58.98,Instagram
+2026-07-19,Heeled Wedges,Footwear,1,64.93,Instagram
+2026-07-19,Heeled Wedges,Footwear,1,63.88,TikTok Shop
+2026-07-19,Slip-on Sandals,Footwear,1,29.06,Instagram
+2026-07-19,Batik Shirt,Apparel,1,55.32,Shopee
+2026-07-19,Batik Shirt,Apparel,2,55.2,TikTok Shop
+2026-07-20,Heeled Wedges,Footwear,4,64.28,Shopee
+2026-07-20,Silk Hijab,Apparel,2,23.83,Shopee
+2026-07-20,Casual Kurung,Apparel,1,73.8,Shopee
+2026-07-20,Crossbody Bag,Accessories,1,59.84,TikTok Shop
+2026-07-20,Casual Kurung,Apparel,1,73.76,Instagram
+2026-07-20,Canvas Sneakers,Footwear,2,50.28,Shopee
+2026-07-21,Baju Melayu Set,Apparel,1,90.2,Shopee
+2026-07-21,Silk Hijab,Apparel,1,24.01,Instagram
+2026-07-21,Silk Hijab,Apparel,3,23.85,Shopee
+2026-07-21,Canvas Sneakers,Footwear,1,50.47,Shopee
+2026-07-21,Printed Blouse,Apparel,1,35.31,Shopee
+2026-07-21,Heeled Wedges,Footwear,2,66.47,TikTok Shop
+2026-07-21,Casual Kurung,Apparel,1,76.02,Shopee
+2026-07-22,Casual Kurung,Apparel,1,75.41,Shopee
+2026-07-22,Silk Hijab,Apparel,1,25.83,TikTok Shop
+2026-07-22,Baju Melayu Set,Apparel,1,88.7,TikTok Shop
+2026-07-22,Canvas Sneakers,Footwear,1,48.98,TikTok Shop
+2026-07-22,Slip-on Sandals,Footwear,1,28.44,Shopee
+2026-07-22,Canvas Sneakers,Footwear,1,48.62,Shopee
+2026-07-22,Crossbody Bag,Accessories,4,58.69,Shopee
+2026-07-22,Tote Bag,Accessories,1,26.08,Shopee
+2026-07-23,Baju Melayu Set,Apparel,1,88.94,TikTok Shop
+2026-07-23,Crossbody Bag,Accessories,1,58.29,Shopee
+2026-07-23,Batik Shirt,Apparel,3,54.85,Shopee
+2026-07-23,Canvas Sneakers,Footwear,2,49.75,TikTok Shop
+2026-07-24,Batik Shirt,Apparel,2,53.86,TikTok Shop
+2026-07-24,Crossbody Bag,Accessories,1,58.21,Shopee
+2026-07-24,Crossbody Bag,Accessories,3,58.19,Shopee
+2026-07-24,Heeled Wedges,Footwear,2,65.59,Shopee
+2026-07-25,Crossbody Bag,Accessories,1,59.66,TikTok Shop
+2026-07-25,Canvas Sneakers,Footwear,2,48.27,Shopee
+2026-07-25,Silk Hijab,Apparel,1,24.24,Instagram
+2026-07-25,Silk Hijab,Apparel,1,24.33,TikTok Shop
+2026-07-26,Slip-on Sandals,Footwear,1,28.33,Shopee
+2026-07-26,Crossbody Bag,Accessories,1,58.26,Instagram
+2026-07-26,Printed Blouse,Apparel,1,36.43,TikTok Shop
+2026-07-26,Tote Bag,Accessories,2,24.44,TikTok Shop
+2026-07-26,Wireless Earbuds Pro,Electronics,1,78.18,Shopee
+2026-07-27,Slip-on Sandals,Footwear,2,27.54,TikTok Shop
+2026-07-27,Wireless Earbuds Pro,Electronics,4,80.41,Shopee
+2026-07-27,Wireless Earbuds Pro,Electronics,1,79.24,Instagram
+2026-07-27,Slip-on Sandals,Footwear,1,28.83,Shopee
+2026-07-27,Wireless Earbuds Pro,Electronics,1,79.58,Shopee
+2026-07-27,Tote Bag,Accessories,1,25.84,Shopee
+2026-07-27,Heeled Wedges,Footwear,2,66.34,Instagram
+2026-07-27,Casual Kurung,Apparel,2,75.87,Shopee
+2026-07-27,Printed Blouse,Apparel,1,36.36,Shopee
+2026-07-28,Slip-on Sandals,Footwear,2,29.7,Shopee
+2026-07-28,Crossbody Bag,Accessories,2,59.48,Shopee
+2026-07-28,Heeled Wedges,Footwear,1,66.13,Instagram
+2026-07-28,Batik Shirt,Apparel,1,55.1,TikTok Shop
