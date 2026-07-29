@@ -65,8 +65,9 @@ def forecast_demand(db: Session, user_id: int, SaleRecord):
             # Predict next 7 days
             predictions = fit_model.forecast(7)
             
-            # Construct return objects
-            last_date = prod_df.index[-1]
+            # Construct return objects (anchor forecast to today so dates are current live dates)
+            today_date = datetime.date.today()
+            last_date = datetime.datetime(today_date.year, today_date.month, today_date.day) - datetime.timedelta(days=1)
             for i, pred_vol in enumerate(predictions):
                 # Ensure we don't predict negative sales
                 pred_vol = max(0, float(pred_vol))
@@ -129,7 +130,8 @@ def forecast_demand_for_product(db: Session, user_id: int, SaleRecord, product_n
         fit_model = model.fit()
         predictions = fit_model.forecast(7)
         
-        last_date = prod_df.index[-1]
+        today_date = datetime.date.today()
+        last_date = datetime.datetime(today_date.year, today_date.month, today_date.day) - datetime.timedelta(days=1)
         for i, pred_vol in enumerate(predictions):
             pred_vol = max(0, float(pred_vol))
             forecast_date = last_date + datetime.timedelta(days=i+1)
