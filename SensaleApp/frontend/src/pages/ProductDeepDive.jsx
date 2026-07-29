@@ -165,7 +165,7 @@ export default function ProductDeepDive() {
                                  <stop offset="100%" stopColor="#818cf8" stopOpacity={0}/>
                               </linearGradient>
                            </defs>
-                           <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{fontSize: 11, fill: '#94a3b8', fontWeight: 700}} dy={10} />
+                           <XAxis dataKey="name" interval={0} axisLine={false} tickLine={false} tick={{fontSize: 11, fill: '#94a3b8', fontWeight: 700}} dy={10} />
                            <Tooltip
                               contentStyle={{borderRadius: '12px', border: 'none', background: '#ffffff', padding: '12px', boxShadow: '0 10px 25px rgba(0,0,0,0.12)'}}
                               labelStyle={{color: '#64748b', fontWeight: '900', marginBottom: '4px', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.05em'}}

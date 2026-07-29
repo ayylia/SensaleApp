@@ -169,9 +169,10 @@ export default function Forecast() {
                       </defs>
                       <XAxis
                         dataKey="name"
+                        interval={0}
                         axisLine={false}
                         tickLine={false}
-                        tick={{ fontSize: 10, fill: '#94a3b8', fontWeight: 700 }}
+                        tick={{ fontSize: 9, fill: '#94a3b8', fontWeight: 700 }}
                         dy={10}
                       />
                       <YAxis
