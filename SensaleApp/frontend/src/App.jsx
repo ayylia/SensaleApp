@@ -29,11 +29,15 @@ export function setCached(key, data) {
   pageCache[key] = { data, ts: Date.now() };
 }
 
-const fallbackUrl = import.meta.env.VITE_API_URL || (
-  window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
-    ? 'http://127.0.0.1:8000' 
-    : 'https://sensaleapp.onrender.com'
-);
+const getApiBaseUrl = () => {
+  if (import.meta.env.VITE_API_URL) return import.meta.env.VITE_API_URL;
+  const h = window.location.hostname;
+  if (h === 'localhost' || h === '127.0.0.1' || h.startsWith('192.168.') || h.startsWith('172.') || h.startsWith('10.')) {
+    return `http://${h}:8000`;
+  }
+  return 'https://sensaleapp.onrender.com';
+};
+const fallbackUrl = getApiBaseUrl();
 
 export const apiClient = axios.create({
   baseURL: fallbackUrl,
