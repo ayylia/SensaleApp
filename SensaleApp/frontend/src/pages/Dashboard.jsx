@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { apiClient } from "../App";
-import { getCached, setCached } from "../App";
+import { getCached, setCached, pageCache } from "../App";
 import FileUploader from "../components/FileUploader";
 import { AlertCircle, UploadCloud, Activity, Sparkles, Swords, TrendingUp, ArrowRight, Download, Printer } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -86,6 +86,12 @@ export default function Dashboard() {
   }, []);
 
   useEffect(() => { fetchData(); }, [fetchData, refreshKey]);
+
+  const handleUploadComplete = () => {
+    delete pageCache['dashboard'];
+    setRefreshKey(k => k + 1);
+    fetchData(3, false);
+  };
 
   const hoverOn  = (e) => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = C.glow; e.currentTarget.style.borderColor = '#FFE5EC'; };
   const hoverOff = (e) => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = C.shadow; e.currentTarget.style.borderColor = C.border; };
@@ -221,7 +227,7 @@ export default function Dashboard() {
 
           {data.recent_sales?.length === 0 && (
             <div className="animate-fade-in-up">
-              <FileUploader onUploadComplete={() => setRefreshKey(k => k + 1)} />
+              <FileUploader onUploadComplete={handleUploadComplete} />
             </div>
           )}
 
@@ -396,7 +402,7 @@ export default function Dashboard() {
           {/* Upload section */}
           {data.recent_sales?.length > 0 && (
             <div id="upload-section" className="animate-fade-in-up delay-400">
-              <FileUploader onUploadComplete={() => setRefreshKey(k => k + 1)} />
+              <FileUploader onUploadComplete={handleUploadComplete} />
             </div>
           )}
           {/* ── Platform Support ── */}
